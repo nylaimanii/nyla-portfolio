@@ -35,6 +35,29 @@ export const education = [
 
 export const projects = [
   {
+    name: "DocBuddy",
+    stack: ["JavaScript","Python","React","Node.js","Tailwind CSS","AI"],
+    status: "COMPLETED",
+    description: "Before you sign, let Buddy read between the lines. AI-powered document reader that analyzes contracts and legal docs, surfacing red flags before you commit. Built in 24 hours at HackHers 2026.",
+    github: "https://github.com/nylaimanii/docbuddy",
+    devpost: "https://devpost.com/nylaimanii7"
+  },
+  {
+    name: "Greenspace",
+    stack: ["TypeScript","React","Node.js","AI","Maps API"],
+    status: "COMPLETED",
+    description: "The world has a plastic problem. Greenspace rallies people around local environmental issues and inspires collective action to make our greenspaces greener. 2nd Place winner at Georgetown Hoya Hacks 2026.",
+    github: "https://github.com/Agent-AA/greenspace",
+    devpost: "https://devpost.com/nylaimanii7"
+  },
+  {
+    name: "DreamTale",
+    stack: ["JavaScript","React","Firebase","Firestore","CSS"],
+    status: "IN PROGRESS",
+    description: "Where Imagination Comes to Life. An interactive storytelling platform powered by real-time data and dynamic content generation. Built with Firebase for seamless live collaboration.",
+    github: "https://github.com/nylaimanii/dreamtale"
+  },
+  {
     name: "AI Resume & Internship Matcher",
     stack: ["Python","NLP","Cosine Similarity","React","REST API"],
     status: "IN PROGRESS",
@@ -74,22 +97,26 @@ export const projects = [
 
 export const hackathons = [
   {
-    event: "Georgetown University — Hoya Hacks 2026",
-    location: "Washington, D.C.",
-    date: "February 2026",
-    track: "Sustainability Track",
-    placement: "2ND PLACE",
-    description: "First-ever hackathon. Competed against university teams nationwide. Rapidly prototyped an AI-powered sustainability solution — integrated new libraries on the fly. Designed, built, and presented within the time limit.",
-    devpost: "https://devpost.com/nylaimanii7"
-  },
-  {
     event: "Rutgers University — HackHERS 2026",
     location: "New Brunswick, NJ",
-    date: "2026",
+    date: "February 2026",
     track: "Rutgers Women in Computer Science · 24-Hour Hackathon",
     placement: null,
-    description: "Competed in Rutgers' annual women-focused hackathon dedicated to closing the gender gap in tech. Built and shipped a full AI-integrated project in 24 hours. Attended workshops, mentorship sessions, and tech talks.",
-    devpost: "https://devpost.com/nylaimanii7"
+    project: "DocBuddy",
+    description: "Built DocBuddy — an AI-powered document reader that analyzes contracts and surfaces red flags before you sign. Shipped a full-stack JavaScript + Python app in 24 hours. Attended workshops, mentorship sessions, and tech talks.",
+    devpost: "https://devpost.com/nylaimanii7",
+    github: "https://github.com/nylaimanii/docbuddy"
+  },
+  {
+    event: "Georgetown University — Hoya Hacks 2026",
+    location: "Washington, D.C.",
+    date: "January 2026",
+    track: "Sustainability Track",
+    placement: "2ND PLACE",
+    project: "Greenspace",
+    description: "First-ever hackathon. Competed against university teams nationwide. Built Greenspace — an app that rallies communities around local environmental issues. Rapidly prototyped an AI-powered sustainability solution, integrated new libraries on the fly, and presented within the time limit.",
+    devpost: "https://devpost.com/nylaimanii7",
+    github: "https://github.com/Agent-AA/greenspace"
   }
 ];
 
@@ -115,17 +142,30 @@ SKILLS:
 - Vision: OpenCV, MediaPipe
 - Other: UI/UX Design, System Design, Debugging, Clean Architecture, Agentic Software
 
-HACKATHONS:
-- Georgetown Hoya Hacks 2026 — 2ND PLACE, Sustainability Track. Her very first hackathon. Competed against university teams nationwide. Built an AI-powered sustainability solution.
-- Rutgers HackHERS 2026 — 24-hour women in CS hackathon. Built and shipped full AI-integrated project in 24 hours.
+HACKATHONS (14 total participated):
+- Rutgers HackHERS 2026 — 24-hour women in CS hackathon. Built DocBuddy: AI-powered doc reader that surfaces contract red flags. Full-stack JavaScript + Python.
+- Georgetown Hoya Hacks 2026 — 2ND PLACE, Sustainability Track. Her very first hackathon. Built Greenspace: community environmental action app. Competed against university teams nationwide.
 
-PROJECTS (6 total — 4 in progress, 2 completed):
-1. AI Resume & Internship Matcher — Python, NLP, React
-2. Full-Stack Habit & Focus Tracker — MERN, JWT Auth
-3. Computer Vision Accessibility Game — OpenCV, MediaPipe
-4. Algorithm Visualizer — JavaScript, React
-5. Gesture-Controlled Educational Game — COMPLETED
-6. Emotional Regulation Game for Kids — COMPLETED
+DEVPOST ACHIEVEMENTS (5 badges):
+- Hackathon Winner Level 1 — won a hackathon prize (Jan 2026)
+- X Hackathons Level 2 — submitted to multiple hackathons (Feb 2026)
+- Generalist — submitted to 3 hackathons with different themes
+- First In-Person Hackathon (Jan 2026)
+- Welcome to Devpost (Oct 2025)
+
+PROJECTS (9 total):
+COMPLETED:
+1. DocBuddy — JavaScript, Python, React, Tailwind CSS, AI. HackHers 2026. github.com/nylaimanii/docbuddy
+2. Greenspace — TypeScript, React, AI, Maps API. 2nd Place Hoya Hacks 2026. github.com/Agent-AA/greenspace
+3. Gesture-Controlled Educational Game — Python, OpenCV, MediaPipe. Number-matching game for kids 3+.
+4. Emotional Regulation Game for Kids — Python. For neurodivergent children.
+
+IN PROGRESS:
+5. DreamTale — JavaScript, React, Firebase. Storytelling platform. github.com/nylaimanii/dreamtale
+6. AI Resume & Internship Matcher — Python, NLP, React
+7. Full-Stack Habit & Focus Tracker — MERN, JWT Auth
+8. Computer Vision Accessibility Game — OpenCV, MediaPipe
+9. Algorithm Visualizer — JavaScript, React
 
 MENTORSHIP:
 - Mentored by her father, Senior Software Engineer
