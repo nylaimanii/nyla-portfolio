@@ -1,0 +1,215 @@
+/* ── Frutiger Aero / XP-style glossy windows ── */
+
+.window {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.window:hover {
+  transform: translateY(-2px);
+}
+
+/* Glossy inner shine overlay */
+.window::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 55%;
+  background: linear-gradient(180deg,
+    rgba(255,255,255,0.06) 0%,
+    rgba(255,255,255,0.01) 60%,
+    transparent 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+  border-radius: 14px 14px 0 0;
+}
+
+/* Corner cut */
+.window::before {
+  content: '';
+  position: absolute;
+  bottom: 0; right: 0;
+  width: 18px; height: 18px;
+  background: var(--bg);
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+  z-index: 3;
+}
+
+/* ── Variant: lime (primary) ── */
+.window-lime {
+  background:
+    linear-gradient(135deg, rgba(0,255,136,0.12) 0%, rgba(0,0,20,0.75) 100%);
+  border: 1px solid rgba(0,255,136,0.35);
+  box-shadow:
+    0 0 25px rgba(0,255,136,0.12),
+    0 8px 32px rgba(0,0,0,0.5),
+    inset 0 1px 0 rgba(255,255,255,0.08);
+}
+.window-lime:hover {
+  box-shadow:
+    0 0 40px rgba(0,255,136,0.25),
+    0 12px 40px rgba(0,0,0,0.6),
+    inset 0 1px 0 rgba(255,255,255,0.08);
+}
+.window-lime .window-titlebar {
+  background: linear-gradient(180deg,
+    rgba(0,255,136,0.55) 0%,
+    rgba(0,200,100,0.65) 48%,
+    rgba(0,150,70,0.80) 52%,
+    rgba(0,100,50,0.90) 100%
+  );
+  border-bottom: 1px solid rgba(0,255,136,0.4);
+  color: #fff;
+  text-shadow: 0 0 8px rgba(0,255,136,0.8), 0 1px 2px rgba(0,0,0,0.8);
+}
+.window-lime .window-titlebar::before {
+  background: linear-gradient(180deg, rgba(255,255,255,0.22) 0%, transparent 100%);
+}
+
+/* ── Variant: cyan ── */
+.window-cyan {
+  background:
+    linear-gradient(135deg, rgba(0,229,255,0.10) 0%, rgba(0,0,20,0.75) 100%);
+  border: 1px solid rgba(0,229,255,0.30);
+  box-shadow:
+    0 0 25px rgba(0,229,255,0.10),
+    0 8px 32px rgba(0,0,0,0.5),
+    inset 0 1px 0 rgba(255,255,255,0.07);
+}
+.window-cyan:hover {
+  box-shadow:
+    0 0 40px rgba(0,229,255,0.22),
+    0 12px 40px rgba(0,0,0,0.6),
+    inset 0 1px 0 rgba(255,255,255,0.07);
+}
+.window-cyan .window-titlebar {
+  background: linear-gradient(180deg,
+    rgba(0,200,255,0.55) 0%,
+    rgba(0,160,220,0.65) 48%,
+    rgba(0,120,180,0.80) 52%,
+    rgba(0,80,140,0.90) 100%
+  );
+  border-bottom: 1px solid rgba(0,229,255,0.35);
+  color: #fff;
+  text-shadow: 0 0 8px rgba(0,229,255,0.8), 0 1px 2px rgba(0,0,0,0.8);
+}
+.window-cyan .window-titlebar::before {
+  background: linear-gradient(180deg, rgba(255,255,255,0.2) 0%, transparent 100%);
+}
+
+/* ── Variant: pink ── */
+.window-pink {
+  background:
+    linear-gradient(135deg, rgba(255,0,204,0.10) 0%, rgba(0,0,20,0.75) 100%);
+  border: 1px solid rgba(255,0,204,0.30);
+  box-shadow:
+    0 0 25px rgba(255,0,204,0.10),
+    0 8px 32px rgba(0,0,0,0.5),
+    inset 0 1px 0 rgba(255,255,255,0.07);
+}
+.window-pink:hover {
+  box-shadow:
+    0 0 40px rgba(255,0,204,0.22),
+    0 12px 40px rgba(0,0,0,0.6),
+    inset 0 1px 0 rgba(255,255,255,0.07);
+}
+.window-pink .window-titlebar {
+  background: linear-gradient(180deg,
+    rgba(255,60,200,0.60) 0%,
+    rgba(220,0,170,0.70) 48%,
+    rgba(170,0,130,0.85) 52%,
+    rgba(120,0,90,0.92) 100%
+  );
+  border-bottom: 1px solid rgba(255,0,204,0.35);
+  color: #fff;
+  text-shadow: 0 0 8px rgba(255,0,204,0.8), 0 1px 2px rgba(0,0,0,0.8);
+}
+.window-pink .window-titlebar::before {
+  background: linear-gradient(180deg, rgba(255,255,255,0.2) 0%, transparent 100%);
+}
+
+/* ── Variant: orange ── */
+.window-orange {
+  background:
+    linear-gradient(135deg, rgba(255,102,0,0.10) 0%, rgba(0,0,20,0.75) 100%);
+  border: 1px solid rgba(255,102,0,0.30);
+  box-shadow:
+    0 0 25px rgba(255,102,0,0.10),
+    0 8px 32px rgba(0,0,0,0.5),
+    inset 0 1px 0 rgba(255,255,255,0.07);
+}
+.window-orange:hover {
+  box-shadow:
+    0 0 40px rgba(255,102,0,0.22),
+    0 12px 40px rgba(0,0,0,0.6),
+    inset 0 1px 0 rgba(255,255,255,0.07);
+}
+.window-orange .window-titlebar {
+  background: linear-gradient(180deg,
+    rgba(255,140,0,0.60) 0%,
+    rgba(220,90,0,0.70) 48%,
+    rgba(180,60,0,0.85) 52%,
+    rgba(130,40,0,0.92) 100%
+  );
+  border-bottom: 1px solid rgba(255,102,0,0.35);
+  color: #fff;
+  text-shadow: 0 0 8px rgba(255,102,0,0.8), 0 1px 2px rgba(0,0,0,0.8);
+}
+.window-orange .window-titlebar::before {
+  background: linear-gradient(180deg, rgba(255,255,255,0.2) 0%, transparent 100%);
+}
+
+/* ── Titlebar shared ── */
+.window-titlebar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 14px;
+  font-family: var(--font-retro);
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  z-index: 2;
+}
+
+/* Glossy highlight stripe on titlebar */
+.window-titlebar::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 50%;
+  pointer-events: none;
+  border-radius: 14px 14px 0 0;
+  z-index: 0;
+}
+
+.window-titlebar > * {
+  position: relative;
+  z-index: 1;
+}
+
+.window-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.window-dot-red    { background: #ff5f57; box-shadow: 0 0 5px #ff5f57; }
+.window-dot-yellow { background: #febc2e; box-shadow: 0 0 5px #febc2e; }
+.window-dot-green  { background: #28c840; box-shadow: 0 0 5px #28c840; }
+
+.window-body {
+  padding: 22px;
+  position: relative;
+  z-index: 2;
+}
+
+.window-full {
+  grid-column: 1 / -1;
+}
