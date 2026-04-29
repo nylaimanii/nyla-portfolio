@@ -7,7 +7,7 @@ export const personalInfo = {
   devpost: "https://devpost.com/nylaimanii7",
   portfolio: "https://nyla-portfolio-xi.vercel.app",
   location: "New York City Metropolitan Area",
-  status: "OPEN TO OPPORTUNITIES — Summer 2026",
+  status: "OPEN TO OPPORTUNITIES",
   email: ""
 };
 
@@ -228,8 +228,6 @@ export const hackathons = [
 export const badges = [
   { name: "Hackathon Winner",       icon: "♛", color: "yellow"   },
   { name: "3x Hackathons",          icon: "✦", color: "lavender" },
-  { name: "First In-Person",        icon: "★", color: "pink"     },
-  { name: "Generalist",             icon: "◆", color: "mint"     },
   { name: "Welcome to Devpost",     icon: "♥", color: "peach"    },
 ];
 
@@ -248,7 +246,7 @@ PERSONAL:
 - Full name: Nyla Wilson
 - Title: Software Developer | AI & Full-Stack Engineer | NYC Metro
 - Location: New York City Metropolitan Area
-- Status: OPEN TO OPPORTUNITIES — Summer 2026
+- Status: OPEN TO OPPORTUNITIES
 - GitHub: github.com/nylaimanii
 - LinkedIn: linkedin.com/in/nylaimanii
 - Devpost: devpost.com/nylaimanii7

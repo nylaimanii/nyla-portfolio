@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import Particles from './Particles';
-import ThemeToggle from './ThemeToggle';
 import { personalInfo, badges } from '../constants/data';
 import '../styles/animations.css';
 
@@ -31,7 +30,6 @@ export default function Header() {
   return (
     <header className="header">
       <Particles />
-      <ThemeToggle />
       <div className="header-content">
         <div className="boot-text">
           <span>{displayed}</span>
