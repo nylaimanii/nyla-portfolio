@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 
-const COLORS = ['#00e5ff', '#ff00cc', '#00ff88', '#ffff00', '#ff6600', '#39ff14'];
+const PASTEL_COLORS = ['#F2C6DE', '#DBCDF0', '#C6DEF1', '#C9E4DE', '#F7D9C4', '#FAEDCB'];
 
 function randomBetween(a, b) {
   return a + Math.random() * (b - a);
@@ -11,30 +11,45 @@ export default function Cursor() {
   const [active, setActive] = useState(false);
   const [pointer, setPointer] = useState(false);
   const [sparkles, setSparkles] = useState([]);
+  const [isDark, setIsDark] = useState(false);
   const sparkleId = useRef(0);
   const lastSparkle = useRef(0);
 
-  const glowColor = pointer ? '#ff00cc' : '#00ff88';
+  // Sync with theme class
+  useEffect(() => {
+    const check = () => setIsDark(document.body.classList.contains('theme-dark'));
+    check();
+    const observer = new MutationObserver(check);
+    observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+    return () => observer.disconnect();
+  }, []);
+
+  const palette = isDark
+    ? ['#00e5ff', '#ff00cc', '#00ff88', '#ffff00']
+    : PASTEL_COLORS;
+
+  const cursorColor = pointer
+    ? (isDark ? '#ff00cc' : '#F2C6DE')
+    : (isDark ? '#00ff88' : '#DBCDF0');
 
   const spawnSparkle = useCallback((x, y) => {
     const now = Date.now();
     if (now - lastSparkle.current < 35) return;
     lastSparkle.current = now;
 
-    const id = sparkleId.current++;
     const count = Math.floor(randomBetween(1, 3));
     const newSparkles = Array.from({ length: count }, () => ({
       id: sparkleId.current++,
       x: x + randomBetween(-12, 12),
       y: y + randomBetween(-12, 12),
-      size: randomBetween(6, 13),
-      color: COLORS[Math.floor(Math.random() * COLORS.length)],
-      star: Math.random() > 0.4,
+      size: randomBetween(7, 14),
+      color: palette[Math.floor(Math.random() * palette.length)],
+      kind: Math.random() > 0.5 ? 'star' : (Math.random() > 0.5 ? 'heart' : 'sparkle'),
       born: now,
     }));
 
     setSparkles(prev => [...prev.slice(-24), ...newSparkles]);
-  }, []);
+  }, [palette]);
 
   useEffect(() => {
     const onMove = (e) => {
@@ -62,7 +77,7 @@ export default function Cursor() {
   useEffect(() => {
     const interval = setInterval(() => {
       const now = Date.now();
-      setSparkles(prev => prev.filter(s => now - s.born < 650));
+      setSparkles(prev => prev.filter(s => now - s.born < 700));
     }, 60);
     return () => clearInterval(interval);
   }, []);
@@ -72,9 +87,9 @@ export default function Cursor() {
       {/* Sparkle trail */}
       {sparkles.map(s => {
         const age = Date.now() - s.born;
-        const t = age / 650;
+        const t = age / 700;
         const opacity = Math.max(0, 1 - t * t);
-        const scale = 0.4 + (1 - t) * 0.6;
+        const scale = 0.4 + (1 - t) * 0.7;
 
         return (
           <div
@@ -85,37 +100,17 @@ export default function Cursor() {
               left: 0,
               pointerEvents: 'none',
               zIndex: 999998,
-              transform: `translate(${s.x - s.size / 2}px, ${s.y - s.size / 2}px) scale(${scale})`,
+              transform: `translate(${s.x - s.size / 2}px, ${s.y - s.size / 2}px) scale(${scale}) rotate(${age * 0.3}deg)`,
               opacity,
               transformOrigin: 'center center',
+              fontSize: `${s.size}px`,
+              lineHeight: 1,
+              color: s.color,
+              filter: `drop-shadow(0 0 4px ${s.color})`,
+              fontFamily: 'serif',
             }}
           >
-            {s.star ? (
-              <svg
-                width={s.size}
-                height={s.size}
-                viewBox="0 0 10 10"
-                style={{ imageRendering: 'pixelated', filter: `drop-shadow(0 0 3px ${s.color})` }}
-              >
-                <polygon
-                  points="5,0 6.2,3.8 10,3.8 7,6.2 8.2,10 5,7.6 1.8,10 3,6.2 0,3.8 3.8,3.8"
-                  fill={s.color}
-                />
-              </svg>
-            ) : (
-              /* 4-pointed sparkle cross */
-              <svg
-                width={s.size}
-                height={s.size}
-                viewBox="0 0 10 10"
-                style={{ imageRendering: 'pixelated', filter: `drop-shadow(0 0 3px ${s.color})` }}
-              >
-                <polygon
-                  points="5,0 6,4 10,5 6,6 5,10 4,6 0,5 4,4"
-                  fill={s.color}
-                />
-              </svg>
-            )}
+            {s.kind === 'heart' ? '♥' : s.kind === 'star' ? '★' : '✦'}
           </div>
         );
       })}
@@ -131,14 +126,14 @@ export default function Cursor() {
         willChange: 'transform',
       }}>
         <div style={{
-          transform: `scale(${active ? 0.82 : 1})`,
-          transformOrigin: '0 0',
-          transition: 'transform 0.08s ease',
+          transform: `scale(${active ? 0.78 : 1}) rotate(${pointer ? -10 : 0}deg)`,
+          transformOrigin: '50% 50%',
+          transition: 'transform 0.1s ease',
         }}>
           {pointer ? (
-            <HandCursor glow={glowColor} />
+            <HeartCursor color={cursorColor} />
           ) : (
-            <ArrowCursor glow={glowColor} />
+            <StarCursor color={cursorColor} />
           )}
         </div>
       </div>
@@ -146,115 +141,56 @@ export default function Cursor() {
   );
 }
 
-function ArrowCursor({ glow }) {
+function StarCursor({ color }) {
   return (
     <svg
-      width="36" height="44"
-      viewBox="0 0 18 22"
+      width="32" height="32"
+      viewBox="-2 -2 24 24"
       xmlns="http://www.w3.org/2000/svg"
-      shapeRendering="crispEdges"
-      style={{ display: 'block' }}
+      style={{ display: 'block', transform: 'translate(-50%, -50%)' }}
     >
       <defs>
-        <filter id="arrow-glow" x="-60%" y="-60%" width="220%" height="220%">
-          <feDropShadow dx="0" dy="0" stdDeviation="2.5" floodColor={glow} floodOpacity="0.95"/>
-          <feDropShadow dx="0" dy="0" stdDeviation="1"   floodColor={glow} floodOpacity="0.6"/>
+        <filter id="cursor-glow" x="-60%" y="-60%" width="220%" height="220%">
+          <feDropShadow dx="0" dy="0" stdDeviation="2.2" floodColor={color} floodOpacity="0.95"/>
+          <feDropShadow dx="0" dy="0" stdDeviation="1"   floodColor={color} floodOpacity="0.6"/>
         </filter>
       </defs>
-      <g filter="url(#arrow-glow)">
-        {/* Col 0 spine */}
-        <rect x="0" y="0"  width="2" height="2" fill="black"/>
-        <rect x="0" y="2"  width="2" height="2" fill="black"/>
-        <rect x="0" y="4"  width="2" height="2" fill="black"/>
-        <rect x="0" y="6"  width="2" height="2" fill="black"/>
-        <rect x="0" y="8"  width="2" height="2" fill="black"/>
-        <rect x="0" y="10" width="2" height="2" fill="black"/>
-        <rect x="0" y="12" width="2" height="2" fill="black"/>
-        <rect x="0" y="14" width="2" height="2" fill="black"/>
-        <rect x="0" y="16" width="2" height="2" fill="black"/>
-        {/* Diagonal right edge */}
-        <rect x="2"  y="2"  width="2" height="2" fill="black"/>
-        <rect x="4"  y="4"  width="2" height="2" fill="black"/>
-        <rect x="6"  y="6"  width="2" height="2" fill="black"/>
-        <rect x="8"  y="8"  width="2" height="2" fill="black"/>
-        <rect x="10" y="10" width="2" height="2" fill="black"/>
-        <rect x="12" y="12" width="2" height="2" fill="black"/>
-        {/* Bottom horizontal bar */}
-        <rect x="2" y="12"  width="12" height="2" fill="black"/>
-        {/* Tail */}
-        <rect x="6" y="14"  width="2" height="2" fill="black"/>
-        <rect x="6" y="16"  width="2" height="2" fill="black"/>
-        <rect x="6" y="18"  width="2" height="2" fill="black"/>
-        <rect x="8" y="20"  width="2" height="2" fill="black"/>
-        <rect x="10" y="20" width="2" height="2" fill="black"/>
-        <rect x="8" y="18"  width="2" height="2" fill="black"/>
-        <rect x="8" y="16"  width="2" height="2" fill="black"/>
-        {/* White interior fill */}
-        <rect x="2"  y="4"  width="2" height="2" fill="white"/>
-        <rect x="2"  y="6"  width="2" height="2" fill="white"/>
-        <rect x="2"  y="8"  width="2" height="2" fill="white"/>
-        <rect x="2"  y="10" width="2" height="2" fill="white"/>
-        <rect x="4"  y="6"  width="2" height="2" fill="white"/>
-        <rect x="4"  y="8"  width="2" height="2" fill="white"/>
-        <rect x="4"  y="10" width="2" height="2" fill="white"/>
-        <rect x="4"  y="12" width="2" height="2" fill="white"/>
-        <rect x="6"  y="8"  width="2" height="2" fill="white"/>
-        <rect x="6"  y="10" width="2" height="2" fill="white"/>
-        <rect x="6"  y="12" width="2" height="2" fill="white"/>
-        <rect x="8"  y="10" width="2" height="2" fill="white"/>
-        <rect x="8"  y="12" width="2" height="2" fill="white"/>
-        <rect x="10" y="12" width="2" height="2" fill="white"/>
-        <rect x="6"  y="16" width="2" height="2" fill="white"/>
-        <rect x="6"  y="18" width="2" height="2" fill="white"/>
-        <rect x="8"  y="18" width="2" height="2" fill="white"/>
+      <g filter="url(#cursor-glow)">
+        {/* Pixel star */}
+        <polygon
+          points="10,0 12.5,7 20,7 13.7,11.5 16.2,19 10,14.5 3.8,19 6.3,11.5 0,7 7.5,7"
+          fill={color}
+          stroke="#fff"
+          strokeWidth="0.8"
+          strokeLinejoin="round"
+        />
       </g>
     </svg>
   );
 }
 
-function HandCursor({ glow }) {
+function HeartCursor({ color }) {
   return (
     <svg
-      width="36" height="44"
-      viewBox="0 0 18 22"
+      width="32" height="32"
+      viewBox="-2 -2 24 24"
       xmlns="http://www.w3.org/2000/svg"
-      shapeRendering="crispEdges"
-      style={{ display: 'block' }}
+      style={{ display: 'block', transform: 'translate(-50%, -50%)' }}
     >
       <defs>
-        <filter id="hand-glow" x="-60%" y="-60%" width="220%" height="220%">
-          <feDropShadow dx="0" dy="0" stdDeviation="2.5" floodColor={glow} floodOpacity="0.95"/>
-          <feDropShadow dx="0" dy="0" stdDeviation="1"   floodColor={glow} floodOpacity="0.6"/>
+        <filter id="heart-glow" x="-60%" y="-60%" width="220%" height="220%">
+          <feDropShadow dx="0" dy="0" stdDeviation="2.5" floodColor={color} floodOpacity="0.95"/>
+          <feDropShadow dx="0" dy="0" stdDeviation="1"   floodColor={color} floodOpacity="0.6"/>
         </filter>
       </defs>
-      <g filter="url(#hand-glow)">
-        {/* Index finger */}
-        <rect x="6" y="0"  width="2" height="2" fill="black"/>
-        <rect x="6" y="2"  width="2" height="2" fill="black"/>
-        <rect x="6" y="4"  width="2" height="2" fill="black"/>
-        <rect x="6" y="6"  width="2" height="2" fill="black"/>
-        <rect x="6" y="8"  width="2" height="2" fill="black"/>
-        <rect x="7" y="1"  width="1" height="8" fill="white"/>
-        {/* Middle finger */}
-        <rect x="9"  y="2"  width="2" height="8" fill="black"/>
-        <rect x="10" y="3"  width="1" height="6" fill="white"/>
-        {/* Ring finger */}
-        <rect x="12" y="4"  width="2" height="6" fill="black"/>
-        <rect x="13" y="5"  width="1" height="4" fill="white"/>
-        {/* Pinky */}
-        <rect x="15" y="6"  width="2" height="4" fill="black"/>
-        <rect x="16" y="7"  width="1" height="2" fill="white"/>
-        {/* Thumb */}
-        <rect x="0" y="10"  width="4" height="6" fill="black"/>
-        <rect x="1" y="11"  width="2" height="4" fill="white"/>
-        {/* Palm */}
-        <rect x="4" y="8"   width="14" height="10" fill="black"/>
-        <rect x="5" y="9"   width="12" height="8"  fill="white"/>
-        {/* Wrist */}
-        <rect x="5"  y="18" width="10" height="2" fill="black"/>
-        <rect x="6"  y="18" width="8"  height="1" fill="white"/>
-        <rect x="5"  y="20" width="10" height="2" fill="black"/>
-        <rect x="6"  y="20" width="8"  height="1" fill="white"/>
+      <g filter="url(#heart-glow)">
+        <path
+          d="M10 18 C 2 12, 0 8, 2.5 4.5 C 4.5 2, 7.5 2.5, 10 5.5 C 12.5 2.5, 15.5 2, 17.5 4.5 C 20 8, 18 12, 10 18 Z"
+          fill={color}
+          stroke="#fff"
+          strokeWidth="0.8"
+          strokeLinejoin="round"
+        />
       </g>
     </svg>
   );

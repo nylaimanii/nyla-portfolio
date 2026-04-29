@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import Window from './Window';
 import { chatbotSystemPrompt } from '../constants/data';
 
-const WELCOME = "Hey! I'm Nyla Bot 🤖 Ask me anything about Nyla — her skills, projects, hackathons, or if she's available for internships!";
+const WELCOME = "Hey! I'm Nyla Bot ♥ Ask me anything about Nyla — her skills, projects, hackathons (3 of them, including a Yale solo build!), her 2 Summer 2026 internship offers, or anything else!";
 
 export default function Chatbot() {
   const [messages, setMessages] = useState([
@@ -73,7 +73,7 @@ export default function Chatbot() {
   };
 
   return (
-    <Window title="// NYLA_BOT.ai" variant="lime" id="chatbot" index={6}>
+    <Window title="✦ NYLA_BOT.ai" variant="lime" id="chatbot" index={7}>
       <div className="chatbot-wrapper">
         <div className="chat-history">
           {messages.map((msg, i) => (

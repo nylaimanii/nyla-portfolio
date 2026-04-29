@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Particles from './Particles';
-import { personalInfo } from '../constants/data';
+import ThemeToggle from './ThemeToggle';
+import { personalInfo, badges } from '../constants/data';
 import '../styles/animations.css';
 
 const bootText = 'INITIALIZING PORTFOLIO_v2026.exe...';
@@ -30,6 +31,7 @@ export default function Header() {
   return (
     <header className="header">
       <Particles />
+      <ThemeToggle />
       <div className="header-content">
         <div className="boot-text">
           <span>{displayed}</span>
@@ -49,10 +51,21 @@ export default function Header() {
               <span className="status-sep">//</span>
               <span>{personalInfo.location}</span>
               <span className="status-sep">//</span>
-              <span>OPEN TO OPPORTUNITIES</span>
+              <span>{personalInfo.status}</span>
             </div>
+
+            <div className="badges-row">
+              {badges.map((b, i) => (
+                <span key={i} className={`pixel-badge badge-${b.color}`}>
+                  <span className="badge-icon">{b.icon}</span>
+                  <span>{b.name}</span>
+                  <span className="badge-tooltip">{b.name}</span>
+                </span>
+              ))}
+            </div>
+
             <nav className="header-nav">
-              {['about','education','skills','projects','hackathons','contact','chatbot'].map(id => (
+              {['about','education','experience','skills','projects','hackathons','contact','chatbot'].map(id => (
                 <button key={id} className="nav-btn" onClick={() => scrollTo(id)}>
                   {id.toUpperCase()}
                 </button>
@@ -69,6 +82,7 @@ export default function Header() {
                 ◈ DEVPOST
               </a>
             </div>
+            <p className="header-hint">try typing my name ✦</p>
           </div>
         )}
       </div>

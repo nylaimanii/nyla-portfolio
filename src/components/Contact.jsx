@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import Window from './Window';
+import Confetti from './Confetti';
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -8,6 +9,7 @@ export default function Contact() {
   const [form, setForm] = useState({ from_name: '', from_email: '', company: '', message: '' });
   const [status, setStatus] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [confettiTrigger, setConfettiTrigger] = useState(0);
 
   const handleChange = (e) => {
     setForm(prev => ({ ...prev, [e.target.name]: e.target.value }));
@@ -37,8 +39,9 @@ export default function Contact() {
         },
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       );
-      setStatus('SUCCESS: Message transmitted. Nyla will respond shortly.');
+      setStatus('SUCCESS: Message transmitted ♥ Nyla will respond shortly.');
       setForm({ from_name: '', from_email: '', company: '', message: '' });
+      setConfettiTrigger(t => t + 1);
     } catch {
       setStatus('ERROR: Transmission failed. Try reaching out directly on LinkedIn.');
     } finally {
@@ -47,11 +50,12 @@ export default function Contact() {
   };
 
   return (
-    <Window title="// CONTACT.exe" variant="pink" id="contact" index={5}>
+    <Window title="♥ CONTACT.exe" variant="pink" id="contact" index={6}>
+      <Confetti trigger={confettiTrigger} />
       <form className="contact-form" onSubmit={handleSubmit} noValidate>
         <div className="form-row">
           <div className="form-group">
-            <label className="form-label">NAME *</label>
+            <label className="form-label">★ NAME *</label>
             <input
               className="form-input"
               type="text"
@@ -63,7 +67,7 @@ export default function Contact() {
             />
           </div>
           <div className="form-group">
-            <label className="form-label">EMAIL *</label>
+            <label className="form-label">★ EMAIL *</label>
             <input
               className="form-input"
               type="email"
@@ -76,7 +80,7 @@ export default function Contact() {
           </div>
         </div>
         <div className="form-group">
-          <label className="form-label">COMPANY / ORGANIZATION</label>
+          <label className="form-label">✦ COMPANY / ORGANIZATION</label>
           <input
             className="form-input"
             type="text"
@@ -88,7 +92,7 @@ export default function Contact() {
           />
         </div>
         <div className="form-group">
-          <label className="form-label">MESSAGE *</label>
+          <label className="form-label">♥ MESSAGE *</label>
           <textarea
             className="form-input form-textarea"
             name="message"
@@ -103,7 +107,7 @@ export default function Contact() {
           className="submit-btn"
           disabled={isLoading}
         >
-          {isLoading ? 'TRANSMITTING...' : '▶ SEND MESSAGE'}
+          {isLoading ? 'TRANSMITTING...' : '✦ SEND MESSAGE ✦'}
         </button>
         {status && (
           <div className={`form-status ${status.startsWith('SUCCESS') ? 'status-success' : 'status-error'}`}>

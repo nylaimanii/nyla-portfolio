@@ -2,9 +2,9 @@ import { useMemo } from 'react';
 import '../styles/particles.css';
 import '../styles/animations.css';
 
-const pixelColors  = ['lime', 'cyan', 'pink', 'yellow'];
-const starColors   = ['lime', 'cyan', 'white', 'pink', 'lime', 'cyan', 'white'];
-const sparkColors  = ['lime', 'cyan', 'white', 'pink'];
+const pixelColors  = ['pink', 'mint', 'blue', 'lavender', 'peach', 'yellow'];
+const starColors   = ['pink', 'mint', 'blue', 'lavender', 'peach', 'white', 'pink', 'lavender'];
+const sparkColors  = ['pink', 'lavender', 'blue', 'mint', 'peach', 'white'];
 
 export default function Particles() {
   const stars = useMemo(() =>
