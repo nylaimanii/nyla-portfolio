@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import Window from './Window';
 import { chatbotSystemPrompt } from '../constants/data';
 
-const WELCOME = "Hey! I'm Nyla Bot ♥ Ask me anything about Nyla — her skills, projects, hackathons (3 of them, including a Yale solo build!), her 2 Summer 2026 internship offers, or anything else!";
+const WELCOME = "Hey — I'm Nyla Bot. Ask me anything about Nyla: her projects, skills, hackathons (including the solo build at Yale that led to two Summer 2026 internship offers), or anything else.";
 
 export default function Chatbot() {
   const [messages, setMessages] = useState([
@@ -73,18 +73,18 @@ export default function Chatbot() {
   };
 
   return (
-    <Window title="✦ NYLA_BOT.ai" variant="lime" id="chatbot" index={7}>
+    <Window title="✦ NYLA_BOT.ai" id="chatbot" index={7}>
       <div className="chatbot-wrapper">
         <div className="chat-history">
           {messages.map((msg, i) => (
             <div key={i} className={`chat-message ${msg.role === 'user' ? 'chat-user' : 'chat-bot'}`}>
-              <span className="chat-role">{msg.role === 'user' ? 'YOU' : 'NYLA BOT'}</span>
+              <span className="chat-role">{msg.role === 'user' ? 'You' : 'Nyla Bot'}</span>
               <span className="chat-text">{msg.content}</span>
             </div>
           ))}
           {isLoading && (
             <div className="chat-message chat-bot">
-              <span className="chat-role">NYLA BOT</span>
+              <span className="chat-role">Nyla Bot</span>
               <span className="chat-text chat-typing">
                 <span className="dot" />
                 <span className="dot" />
@@ -101,7 +101,7 @@ export default function Chatbot() {
             value={input}
             onChange={e => setInput(e.target.value)}
             onKeyDown={handleKeyDown}
-            placeholder="Ask about Nyla..."
+            placeholder="Ask about Nyla…"
             disabled={isLoading}
             autoComplete="off"
           />
@@ -110,7 +110,7 @@ export default function Chatbot() {
             onClick={sendMessage}
             disabled={isLoading || !input.trim()}
           >
-            ▶
+            Send
           </button>
         </div>
       </div>

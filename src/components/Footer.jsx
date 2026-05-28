@@ -5,18 +5,15 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-inner">
         <div className="footer-name">
-          <span className="footer-nyla">NYLA WILSON</span>
-          <span className="footer-cursor">▮</span>
+          Nyla <em>Wilson</em>
         </div>
         <div className="footer-made">
-          made with <span className="heart">♥</span> by nyla wilson // 2026
+          Designed &amp; built by Nyla Wilson · 2026
         </div>
         <div className="footer-links">
-          <a href={personalInfo.github}   target="_blank" rel="noreferrer">GITHUB</a>
-          <span className="footer-sep">//</span>
-          <a href={personalInfo.linkedin} target="_blank" rel="noreferrer">LINKEDIN</a>
-          <span className="footer-sep">//</span>
-          <a href={personalInfo.devpost}  target="_blank" rel="noreferrer">DEVPOST</a>
+          <a href={personalInfo.github}   target="_blank" rel="noreferrer">GitHub</a>
+          <a href={personalInfo.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href={personalInfo.devpost}  target="_blank" rel="noreferrer">Devpost</a>
         </div>
       </div>
     </footer>

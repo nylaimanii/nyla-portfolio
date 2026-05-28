@@ -1,53 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=VT323&family=Share+Tech+Mono&display=swap');
-
-/* ═══════════════════════════════════════
-   PASTEL RAINBOW THEME (default)
-═══════════════════════════════════════ */
 :root {
-  /* Pastel rainbow palette */
-  --pastel-yellow:   #FAEDCB;
-  --pastel-mint:     #C9E4DE;
-  --pastel-blue:     #C6DEF1;
-  --pastel-lavender: #DBCDF0;
-  --pastel-pink:     #F2C6DE;
-  --pastel-peach:    #F7D9C4;
+  --bg:            #FAF7F2;
+  --bg-card:       #F5EFF8;
+  --bg-section:    #F2EDE6;
+  --text:          #1A1A1A;
+  --text-muted:    #6B6560;
+  --accent:        #E8A0BF;
+  --accent-dark:   #C4728F;
+  --accent-2:      #7B9E87;
+  --accent-2-dark: #5C7A68;
+  --border:        #E8E0D5;
+  --border-pink:   rgba(232,160,191,0.35);
+  --shadow:        rgba(196,114,143,0.12);
 
-  /* Semantic mapping (what App.css uses) */
-  --bg:     #FFFAF7;
-  --bg-2:   #FDF8F4;
-  --cyan:   #6EA8D4;   /* readable on light bg, derived from blue */
-  --pink:   #D87BAE;
-  --lime:   #7FB8A2;   /* mint-derived */
-  --green:  #7FB8A2;
-  --yellow: #C9A55A;
-  --orange: #D89878;
-  --lavender: #9B7FC7;
-
-  /* Light, soft "tag" colors */
-  --tag-yellow-bg:   rgba(250,237,203,0.65);
-  --tag-mint-bg:     rgba(201,228,222,0.65);
-  --tag-blue-bg:     rgba(198,222,241,0.65);
-  --tag-lavender-bg: rgba(219,205,240,0.65);
-  --tag-pink-bg:     rgba(242,198,222,0.65);
-  --tag-peach-bg:    rgba(247,217,196,0.65);
-
-  --panel:  rgba(255,255,255,0.55);
-  --border: rgba(155,127,199,0.25);
-  --text:   #2D2A3E;
-  --text-soft: rgba(45,42,62,0.7);
-  --text-mute: rgba(45,42,62,0.5);
-
-  --glow-cyan:   0 0 0 2px rgba(198,222,241,0.55), 0 0 20px rgba(198,222,241,0.7);
-  --glow-pink:   0 0 0 2px rgba(242,198,222,0.55), 0 0 22px rgba(242,198,222,0.75);
-  --glow-lime:   0 0 0 2px rgba(201,228,222,0.55), 0 0 20px rgba(201,228,222,0.7);
-  --glow-green:  0 0 0 2px rgba(201,228,222,0.55), 0 0 20px rgba(201,228,222,0.7);
-  --glow-orange: 0 0 0 2px rgba(247,217,196,0.55), 0 0 22px rgba(247,217,196,0.75);
-  --glow-lavender: 0 0 0 2px rgba(219,205,240,0.55), 0 0 22px rgba(219,205,240,0.75);
-  --glow-yellow: 0 0 0 2px rgba(250,237,203,0.55), 0 0 22px rgba(250,237,203,0.75);
-
-  --font-main:  'Orbitron', monospace;
-  --font-retro: 'VT323', monospace;
-  --font-mono:  'Share Tech Mono', monospace;
+  --font-display: 'Playfair Display', serif;
+  --font-body:    'DM Sans', sans-serif;
+  --font-mono:    'DM Mono', monospace;
 }
 
 *, *::before, *::after {
@@ -63,109 +30,67 @@ html {
 
 body {
   background-color: var(--bg);
-  background-image:
-    radial-gradient(ellipse 120% 55% at 50% -5%, rgba(219,205,240,0.45) 0%, transparent 65%),
-    radial-gradient(ellipse 70% 40% at 15% 40%, rgba(198,222,241,0.35) 0%, transparent 55%),
-    radial-gradient(ellipse 60% 35% at 85% 70%, rgba(242,198,222,0.30) 0%, transparent 50%),
-    radial-gradient(ellipse 50% 30% at 50% 100%, rgba(247,217,196,0.30) 0%, transparent 55%),
-    linear-gradient(180deg, #FFFAF7 0%, #FDF8F4 100%);
   color: var(--text);
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
   font-size: 1rem;
-  cursor: none;
+  font-weight: 400;
+  line-height: 1.65;
   min-height: 100vh;
   overflow-x: hidden;
-  line-height: 1.65;
-  transition: background-color 0.4s ease, color 0.4s ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: none;
 }
 
-/* Faint pastel grid */
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(242,198,222,0.20) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(219,205,240,0.20) 1px, transparent 1px);
-  background-size: 44px 44px;
-  pointer-events: none;
-  z-index: 0;
-}
-
-/* CRT scanlines — super subtle on light bg */
-body::after {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background: repeating-linear-gradient(
-    0deg,
-    transparent,
-    transparent 2px,
-    rgba(155,127,199,0.025) 2px,
-    rgba(155,127,199,0.025) 4px
-  );
-  pointer-events: none;
-  z-index: 9999;
-}
-
-/* Pastel scrollbar */
-::-webkit-scrollbar { width: 8px; }
-::-webkit-scrollbar-track { background: rgba(255,250,247,0.5); }
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, var(--pastel-pink), var(--pastel-lavender));
-  border-radius: 6px;
-  box-shadow: 0 0 6px rgba(242,198,222,0.6);
+  background: var(--border);
+  border-radius: 10px;
+  border: 2px solid var(--bg);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, var(--pastel-lavender), var(--pastel-pink));
+  background: var(--border-pink);
 }
 
 a {
-  color: var(--lavender);
+  color: var(--accent-dark);
   text-decoration: none;
-  transition: color 0.2s, text-shadow 0.2s, transform 0.2s;
+  transition: color 0.2s ease;
 }
-a:hover {
-  color: var(--pink);
-}
+a:hover { color: var(--accent); }
 
-button, a, input, textarea { cursor: none !important; }
-
-#root {
-  position: relative;
-  z-index: 1;
+button {
+  font-family: inherit;
+  background: none;
+  border: none;
+  color: inherit;
 }
 
-/* ═══════════════════════════════════════
-   CUTE PASTEL ANIMATIONS
-═══════════════════════════════════════ */
-
-@keyframes wiggle {
-  0%, 100% { transform: rotate(0deg); }
-  25%      { transform: rotate(-3deg); }
-  75%      { transform: rotate(3deg); }
+input, textarea {
+  font-family: inherit;
+  color: inherit;
 }
 
-@keyframes bounce-soft {
-  0%, 100% { transform: translateY(0); }
-  50%      { transform: translateY(-4px); }
+button, a, input, textarea, select { cursor: none !important; }
+
+#root { position: relative; }
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--text);
+  font-weight: 700;
+  line-height: 1.15;
 }
 
-@keyframes float-pixel {
-  0%   { transform: translateY(100vh) rotate(0deg); opacity: 0; }
-  10%  { opacity: 0.8; }
-  90%  { opacity: 0.8; }
-  100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
-}
+p { color: var(--text); }
 
-@keyframes sparkle-pop {
-  0%   { transform: scale(0) rotate(0deg); opacity: 0; }
-  50%  { transform: scale(1.2) rotate(180deg); opacity: 1; }
-  100% { transform: scale(0) rotate(360deg); opacity: 0; }
-}
-
-@keyframes float-up-fade {
-  0%   { transform: translate(0, 0) scale(0.4) rotate(0deg); opacity: 0; }
-  20%  { opacity: 1; }
-  100% { transform: translate(var(--end-x, 0), var(--end-y, -180px)) scale(0.9) rotate(360deg); opacity: 0; }
+/* Utility: section eyebrow label */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--accent-dark);
+  letter-spacing: 3px;
+  text-transform: uppercase;
 }

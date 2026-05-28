@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 
 const TRIGGER = 'nyla';
-const SYMBOLS = ['♥', '★', '✦', '♡', '✿', '♥', '★'];
-const COLORS  = ['#F2C6DE', '#DBCDF0', '#C6DEF1', '#C9E4DE', '#F7D9C4', '#FAEDCB'];
+const SYMBOLS = ['♥', '✦', '·', '◦'];
+const COLORS  = ['#E8A0BF', '#C4728F', '#7B9E87', '#5C7A68'];
 
 export default function KawaiiEasterEgg() {
   const [bursts, setBursts] = useState([]);

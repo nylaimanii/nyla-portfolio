@@ -1,31 +1,43 @@
 import Window from './Window';
-import { stats } from '../constants/data';
+
+const STATS = [
+  { num: '10+', label: 'Projects Shipped' },
+  { num: '3',   label: 'Hackathons Competed' },
+];
 
 export default function About() {
   return (
-    <Window title="♥ ABOUT.exe" variant="cyan" id="about" index={0}>
-      <div className="about-content">
-        <div className="about-text">
-          <p className="about-para">
-            I'm <span className="highlight-cyan">Nyla Wilson</span>, a first-generation Panamanian-American and first-year Computer Science student at <span className="highlight-pink">Camden County College</span> with a genuine passion for building software that makes a real difference. I love the process of taking an idea and turning it into something people can actually use — and I am always looking for opportunities to grow, contribute, and learn from talented engineers.
+    <Window title="♥ ABOUT.exe" id="about" index={0}>
+      <div className="about-grid">
+        <div className="about-bio">
+          <p>
+            I&apos;m Nyla Wilson — a 20-year-old Computer Science student at
+            Camden County College, building full-stack and AI projects that
+            solve real problems. I&apos;m <em className="bio-highlight">self-taught</em>{' '}
+            across most of what I know, and I&apos;ve been{' '}
+            <em className="bio-highlight">building solo</em> since before I
+            ever took a CS class.
           </p>
-          <p className="about-para">
-            Over the past year I have developed a strong foundation across the full stack — <span className="highlight-lavender">Python, JavaScript, TypeScript, React, Next.js, SvelteKit, Node.js, and FastAPI</span> — alongside hands-on experience working with AI tools like <span className="highlight-pink">Groq (LLaMA 3.3), Google Gemini, and K2 Think V2</span>. I have also built and trained convolutional neural networks for real-time inference, and I am actively learning <span className="highlight-orange">Rust and Go</span>.
+          <p>
+            My dad <em className="bio-highlight">immigrated from Panama</em>{' '}
+            and built a career as a senior software engineer at IBM and
+            Microsoft. Watching him taught me that this field rewards{' '}
+            <em className="bio-highlight">persistence above everything else</em>.
+            I&apos;ve tried to carry that with me.
           </p>
-          <p className="about-para">
-            One of my proudest moments this year was building <span className="highlight-cyan">RIPPLE</span> solo at <span className="highlight-pink">YHack (Yale University, Spring 2026)</span> — an AI-powered interactive history experience. I had 24 hours, no team, and a tech stack I was still learning parts of. I ended up receiving summer internship offers from both <span className="highlight-lavender">Origin Foundation</span> and <span className="highlight-lavender">Actual Foods</span> directly from the event.
-          </p>
-          <p className="about-para">
-            This summer I will be interning at both <span className="highlight-cyan">Origin Foundation</span> and <span className="highlight-cyan">Actual Foods</span> in New York City. I am also mentored throughout my life by my father, a senior software engineer with experience at <span className="highlight-cyan">IBM, Microsoft, DXC, Lockheed Martin, Avanade, Argano</span> and more. His guidance has shaped how I think about writing clean, maintainable code and approaching engineering problems with care.
-          </p>
-          <p className="about-para">
-            I care deeply about building technology that is <span className="highlight-pink">accessible</span>, <span className="highlight-lavender">impactful</span>, and <span className="highlight-cyan">human-centered</span>.
+          <p>
+            I care about building technology that&apos;s accessible and
+            useful — especially for people who are usually afterthoughts
+            in the design process. I{' '}
+            <em className="bio-highlight">show up to hackathons solo</em>,
+            I ship things, and I keep going.
           </p>
         </div>
+
         <div className="about-stats">
-          {stats.map((s, i) => (
-            <div key={i} className={`stat-item stat-${s.accent}-bg`}>
-              <span className={`stat-num stat-${s.accent}`}>{s.num}</span>
+          {STATS.map((s) => (
+            <div key={s.label} className="stat-card">
+              <span className="stat-num">{s.num}</span>
               <span className="stat-label">{s.label}</span>
             </div>
           ))}

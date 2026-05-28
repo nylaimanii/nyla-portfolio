@@ -23,17 +23,15 @@ export default function App() {
       <KawaiiEasterEgg />
       <Cursor />
       <Header />
-      <main className="main-grid">
+      <main>
         <About />
         <Education />
         <Experience />
         <Skills />
         <Projects />
         <Hackathons />
-        <div className="grid-row-2">
-          <Contact />
-          <Chatbot />
-        </div>
+        <Contact />
+        <Chatbot />
       </main>
       <Footer />
     </>

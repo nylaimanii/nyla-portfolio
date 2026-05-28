@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 
-const PASTEL_COLORS = ['#F2C6DE', '#DBCDF0', '#C6DEF1', '#C9E4DE', '#F7D9C4', '#FAEDCB'];
+const SPARKLE_COLORS = ['#E8A0BF', '#C4728F', '#7B9E87', '#5C7A68'];
 
 function randomBetween(a, b) {
   return a + Math.random() * (b - a);
@@ -11,45 +11,27 @@ export default function Cursor() {
   const [active, setActive] = useState(false);
   const [pointer, setPointer] = useState(false);
   const [sparkles, setSparkles] = useState([]);
-  const [isDark, setIsDark] = useState(false);
   const sparkleId = useRef(0);
   const lastSparkle = useRef(0);
 
-  // Sync with theme class
-  useEffect(() => {
-    const check = () => setIsDark(document.body.classList.contains('theme-dark'));
-    check();
-    const observer = new MutationObserver(check);
-    observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
-    return () => observer.disconnect();
-  }, []);
-
-  const palette = isDark
-    ? ['#00e5ff', '#ff00cc', '#00ff88', '#ffff00']
-    : PASTEL_COLORS;
-
-  const cursorColor = pointer
-    ? (isDark ? '#ff00cc' : '#F2C6DE')
-    : (isDark ? '#00ff88' : '#DBCDF0');
+  const cursorColor = pointer ? '#C4728F' : '#E8A0BF';
 
   const spawnSparkle = useCallback((x, y) => {
     const now = Date.now();
-    if (now - lastSparkle.current < 35) return;
+    if (now - lastSparkle.current < 45) return;
     lastSparkle.current = now;
 
-    const count = Math.floor(randomBetween(1, 3));
-    const newSparkles = Array.from({ length: count }, () => ({
+    const newSparkles = [{
       id: sparkleId.current++,
-      x: x + randomBetween(-12, 12),
-      y: y + randomBetween(-12, 12),
-      size: randomBetween(7, 14),
-      color: palette[Math.floor(Math.random() * palette.length)],
-      kind: Math.random() > 0.5 ? 'star' : (Math.random() > 0.5 ? 'heart' : 'sparkle'),
+      x: x + randomBetween(-10, 10),
+      y: y + randomBetween(-10, 10),
+      size: randomBetween(5, 9),
+      color: SPARKLE_COLORS[Math.floor(Math.random() * SPARKLE_COLORS.length)],
       born: now,
-    }));
+    }];
 
-    setSparkles(prev => [...prev.slice(-24), ...newSparkles]);
-  }, [palette]);
+    setSparkles(prev => [...prev.slice(-18), ...newSparkles]);
+  }, []);
 
   useEffect(() => {
     const onMove = (e) => {
@@ -73,23 +55,21 @@ export default function Cursor() {
     };
   }, [spawnSparkle]);
 
-  // Cull old sparkles
   useEffect(() => {
     const interval = setInterval(() => {
       const now = Date.now();
-      setSparkles(prev => prev.filter(s => now - s.born < 700));
+      setSparkles(prev => prev.filter(s => now - s.born < 600));
     }, 60);
     return () => clearInterval(interval);
   }, []);
 
   return (
     <>
-      {/* Sparkle trail */}
       {sparkles.map(s => {
         const age = Date.now() - s.born;
-        const t = age / 700;
+        const t = age / 600;
         const opacity = Math.max(0, 1 - t * t);
-        const scale = 0.4 + (1 - t) * 0.7;
+        const scale = 0.5 + (1 - t) * 0.6;
 
         return (
           <div
@@ -100,22 +80,18 @@ export default function Cursor() {
               left: 0,
               pointerEvents: 'none',
               zIndex: 999998,
-              transform: `translate(${s.x - s.size / 2}px, ${s.y - s.size / 2}px) scale(${scale}) rotate(${age * 0.3}deg)`,
+              transform: `translate(${s.x - s.size / 2}px, ${s.y - s.size / 2}px) scale(${scale})`,
               opacity,
+              width: s.size,
+              height: s.size,
+              borderRadius: '50%',
+              background: s.color,
               transformOrigin: 'center center',
-              fontSize: `${s.size}px`,
-              lineHeight: 1,
-              color: s.color,
-              filter: `drop-shadow(0 0 4px ${s.color})`,
-              fontFamily: 'serif',
             }}
-          >
-            {s.kind === 'heart' ? '♥' : s.kind === 'star' ? '★' : '✦'}
-          </div>
+          />
         );
       })}
 
-      {/* Main cursor */}
       <div style={{
         position: 'fixed',
         top: 0,
@@ -126,72 +102,17 @@ export default function Cursor() {
         willChange: 'transform',
       }}>
         <div style={{
-          transform: `scale(${active ? 0.78 : 1}) rotate(${pointer ? -10 : 0}deg)`,
+          transform: `translate(-50%, -50%) scale(${active ? 0.78 : 1})`,
           transformOrigin: '50% 50%',
-          transition: 'transform 0.1s ease',
-        }}>
-          {pointer ? (
-            <HeartCursor color={cursorColor} />
-          ) : (
-            <StarCursor color={cursorColor} />
-          )}
-        </div>
+          transition: 'transform 0.12s ease',
+          width: pointer ? 28 : 16,
+          height: pointer ? 28 : 16,
+          borderRadius: '50%',
+          border: pointer ? `1.5px solid ${cursorColor}` : 'none',
+          background: pointer ? 'transparent' : cursorColor,
+          boxShadow: `0 0 0 4px rgba(232,160,191,0.15)`,
+        }} />
       </div>
     </>
-  );
-}
-
-function StarCursor({ color }) {
-  return (
-    <svg
-      width="32" height="32"
-      viewBox="-2 -2 24 24"
-      xmlns="http://www.w3.org/2000/svg"
-      style={{ display: 'block', transform: 'translate(-50%, -50%)' }}
-    >
-      <defs>
-        <filter id="cursor-glow" x="-60%" y="-60%" width="220%" height="220%">
-          <feDropShadow dx="0" dy="0" stdDeviation="2.2" floodColor={color} floodOpacity="0.95"/>
-          <feDropShadow dx="0" dy="0" stdDeviation="1"   floodColor={color} floodOpacity="0.6"/>
-        </filter>
-      </defs>
-      <g filter="url(#cursor-glow)">
-        {/* Pixel star */}
-        <polygon
-          points="10,0 12.5,7 20,7 13.7,11.5 16.2,19 10,14.5 3.8,19 6.3,11.5 0,7 7.5,7"
-          fill={color}
-          stroke="#fff"
-          strokeWidth="0.8"
-          strokeLinejoin="round"
-        />
-      </g>
-    </svg>
-  );
-}
-
-function HeartCursor({ color }) {
-  return (
-    <svg
-      width="32" height="32"
-      viewBox="-2 -2 24 24"
-      xmlns="http://www.w3.org/2000/svg"
-      style={{ display: 'block', transform: 'translate(-50%, -50%)' }}
-    >
-      <defs>
-        <filter id="heart-glow" x="-60%" y="-60%" width="220%" height="220%">
-          <feDropShadow dx="0" dy="0" stdDeviation="2.5" floodColor={color} floodOpacity="0.95"/>
-          <feDropShadow dx="0" dy="0" stdDeviation="1"   floodColor={color} floodOpacity="0.6"/>
-        </filter>
-      </defs>
-      <g filter="url(#heart-glow)">
-        <path
-          d="M10 18 C 2 12, 0 8, 2.5 4.5 C 4.5 2, 7.5 2.5, 10 5.5 C 12.5 2.5, 15.5 2, 17.5 4.5 C 20 8, 18 12, 10 18 Z"
-          fill={color}
-          stroke="#fff"
-          strokeWidth="0.8"
-          strokeLinejoin="round"
-        />
-      </g>
-    </svg>
   );
 }

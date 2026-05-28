@@ -12,17 +12,11 @@ export default function LoadingScreen() {
 
   return (
     <div className="loading-screen">
-      <div className="loading-text">
-        LOADING NYLA.EXE <span className="heart">♥</span>
-      </div>
+      <div className="loading-text">Nyla <em>Wilson</em></div>
       <div className="loading-bar-track">
         <div className="loading-bar-fill" />
       </div>
-      <div className="loading-stars">
-        <span>✦</span>
-        <span>★</span>
-        <span>♥</span>
-      </div>
+      <div className="loading-sub">Portfolio · 2026</div>
     </div>
   );
 }
