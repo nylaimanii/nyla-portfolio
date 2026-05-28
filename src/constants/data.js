@@ -102,83 +102,97 @@ export const experience = [
 
 export const projects = [
   {
+    name: "NEST",
+    subtitle: "Family Planning Financial OS",
+    description: "Personal finance and family planning simulator — models real income, childcare costs, housing, and life decisions with honest projections and place-comparison maps. Hyperlocal cost data, AI-powered scenario analysis via Groq, and interactive charts that surface the real numbers behind major life decisions.",
+    stack: ["Next.js 15","TypeScript","Tailwind v4","shadcn/ui","Groq","Zustand","MapLibre","Recharts","Vercel"],
+    status: "LIVE",
+    github: "https://github.com/nylaimanii/nest",
+    live: "https://nest-eight-theta.vercel.app"
+  },
+  {
+    name: "HAVEN",
+    subtitle: "Personal Climate Adaptation App",
+    description: "Hyperlocal heat, flood, and air-quality risk navigator tuned to who you are and where you live — built for climate adaptation, not prevention. Real climate data layered on interactive maps with AI-powered personal risk summaries and actionable recommendations.",
+    stack: ["Next.js 15","TypeScript","Tailwind v4","MapLibre","deck.gl","Groq","Vercel"],
+    status: "LIVE",
+    github: "https://github.com/nylaimanii/haven",
+    live: "https://haven-delta.vercel.app"
+  },
+  {
+    name: "RESISTANCE",
+    subtitle: "Antibiotic Resistance Simulator",
+    description: "Watch bacteria evolve drug resistance in real time — tune the biology with sliders, run the simulation, then ask an AI tutor what's happening. Teaches the 'don't stop your antibiotics early' lesson live through a logistic growth engine, drug decay curves, and resistance mutation modeling.",
+    stack: ["Next.js 15","TypeScript","Tailwind v4","Zustand","Recharts","Groq LLaMA 3.3","Vercel"],
+    status: "LIVE",
+    github: "https://github.com/nylaimanii/resistance",
+    live: "https://resistance-psi.vercel.app"
+  },
+  {
     name: "FORGE",
-    tagline: "AI Database Builder",
-    stack: ["SvelteKit", "TypeScript", "Tailwind v4", "Supabase", "Groq LLaMA 3.3", "Monaco Editor", "tldraw", "Vercel"],
-    status: "COMPLETED",
-    category: "ai",
-    description: "Browser-based relational database builder with an infinite canvas whiteboard — think Airtable's structure, Figma's canvas, and Supabase's power in one premium dev tool. Features AI schema generation via Groq, visual schema builder, SQL editor with Monaco, live data cards on tldraw canvas, and full Supabase Auth — built entirely on free-tier services.",
-    github: "https://github.com/nylaimanii/forge"
+    subtitle: "AI Database Builder",
+    description: "Browser-based relational database builder — design schemas on a drag-and-drop canvas, query in SQL or plain English, explore data visually. No config, no migrations. AI schema generation via Groq, live data cards on tldraw infinite canvas, full Supabase Auth — built entirely on free-tier services.",
+    stack: ["SvelteKit","TypeScript","Tailwind v4","Supabase","Groq LLaMA 3.3","Monaco Editor","tldraw","Vercel"],
+    status: "LIVE",
+    github: "https://github.com/nylaimanii/forge",
+    live: "https://forge-omega-three.vercel.app"
   },
   {
-    name: "RESUMEPRO",
-    tagline: "AI Resume Analyzer & Builder",
-    stack: ["Next.js 15", "TypeScript", "Tailwind CSS", "shadcn/ui", "Supabase", "Groq LLaMA 3.3", "React PDF"],
-    status: "COMPLETED",
-    category: "ai",
-    description: "Deterministic ATS scoring across 6 measurable factors with keyword matching against a 350+ skill taxonomy. AI suggestions with before/after diff and one-click apply, 3 ATS-safe resume templates, tailored cover letter generation with tone slider, and content-hash caching for sub-1s re-analysis.",
-    github: "https://github.com/nylaimanii/resumepro"
+    name: "MOIRAI",
+    subtitle: "Carbon-Aware GPU Scheduler",
+    description: "Run compute when it's clean and cheap — picks the optimal time and region for GPU/ML jobs using live grid carbon and price data across North America. Interactive globe showing real-time carbon intensity by region; sliding-window optimization engine finds the cleanest scheduling window.",
+    stack: ["React","Three.js","TypeScript","Mapbox GL JS","Groq","Vercel"],
+    status: "LIVE",
+    github: "https://github.com/nylaimanii/moirai"
   },
   {
-    name: "RIPPLE",
-    tagline: "AI Interactive History Experience",
-    stack: ["React 19", "Vite", "K2 Think V2", "Groq", "Gemini 1.5 Flash", "Mapbox GL JS", "Supabase", "Web Speech API"],
-    status: "COMPLETED",
-    category: "hackathon",
-    description: "Solo-built at YHack (Yale, 2026) — users step into real historical moments as decision-makers with a live 3D globe, Human Cost Counter, Decision DNA profile, Mirror Moment, and real-time Regret Archive. Engineered a two-stage JSON parser for K2 Think V2 chain-of-thought blocks and a 5-variant Wikipedia image resolution pipeline.",
-    live: "https://ripple-six-omega.vercel.app"
+    name: "PEEK",
+    subtitle: "Neural Network Interpretability Playground",
+    description: "Train a neural network in your browser, then x-ray it to see what each neuron actually learned. Makes frontier mechanistic interpretability research accessible to beginners — sparse autoencoders, attribution graphs, no PhD required.",
+    stack: ["Next.js","TypeScript","TensorFlow.js","Tailwind CSS","Vercel"],
+    status: "LIVE",
+    github: "https://github.com/nylaimanii/peek"
   },
   {
     name: "MERIDIAN",
-    tagline: "Full-Stack AI Application",
-    stack: ["Meteor.js", "React", "Groq API", "rspack", "Docker", "Railway"],
-    status: "COMPLETED",
-    category: "fullstack",
-    description: "Full-stack application with AI integration, real onboarding flow, condition matching, and production deployment via Docker and Railway.",
+    subtitle: "Clinical Trial Matcher",
+    description: "Tinder for clinical trials — fill out a quick intake, then swipe through recruiting trials matched to your condition, age, and location. Pulls live data from ClinicalTrials.gov (200k+ studies) with Groq powering plain-language summaries and matching. Built solo.",
+    stack: ["Meteor.js","React","Groq API","rspack","Docker","Railway"],
+    status: "LIVE",
     github: "https://github.com/nylaimanii/meridian"
   },
   {
-    name: "DREAMTALE",
-    tagline: "AI Children's Storytelling App",
-    stack: ["JavaScript", "Firebase", "CSS", "HTML"],
-    status: "COMPLETED",
-    category: "ai",
-    description: "AI-powered interactive storytelling app for children — built for the Gemini Live Agent Challenge with Firebase Firestore as the backend database.",
-    github: "https://github.com/nylaimanii/dreamtale"
+    name: "RIPPLE",
+    subtitle: "AI Interactive History Experience",
+    description: "Solo-built at YHack (Yale, 2026) — step into real historical moments as a decision-maker, watch choices ripple across a live 3D globe with documented real-world consequences. Features Human Cost Counter, Decision DNA profile, Mirror Moment, and real-time Regret Archive. Featured by IFM.",
+    stack: ["React 19","Vite","K2 Think V2","Groq","Gemini 1.5 Flash","Mapbox GL JS","Supabase","Web Speech API"],
+    status: "LIVE",
+    github: "https://github.com/nylaimanii/ripple",
+    live: "https://ripple-six-omega.vercel.app"
   },
   {
     name: "GREENSPACE",
-    tagline: "Environmental Social Good Platform",
-    stack: ["TypeScript", "React", "Vite", "Node.js", "Drizzle ORM", "Google Gemini AI"],
-    status: "COMPLETED — Hoya Hacks 2026 Winner",
-    category: "hackathon",
-    description: "AI-powered community app where Gemini evaluates eco-action photos and builds competitive Green Score leaderboards with community feeds.",
-    github: "https://github.com/Agent-AA/greenspace"
+    subtitle: "Sustainability Social Platform",
+    description: "AI-powered community app where Gemini evaluates eco-action photos and builds competitive Green Score leaderboards. Won Georgetown Hoya Hacks 2026 Sustainability Track powered by Cisco.",
+    stack: ["TypeScript","React","Vite","Node.js","Drizzle ORM","Google Gemini AI"],
+    status: "WINNER",
+    github: "https://github.com/nylaimanii/greenspace"
   },
   {
     name: "DOCBUDDY",
-    tagline: "AI Legal Document Analyzer",
-    stack: ["React", "Framer Motion", "Tailwind CSS", "Python", "FastAPI"],
-    status: "COMPLETED",
-    category: "hackathon",
-    description: "Analyzes uploaded legal and financial documents using AI, returning plain-language summaries and risk flags.",
+    subtitle: "AI Legal Document Analyzer",
+    description: "Paste a confusing financial doc — lease, loan, rental — and DOCBUDDY breaks it into plain English: summary, pros/cons, deadlines, real costs, and a risk score. Built at HackHERS 2026.",
+    stack: ["React","Framer Motion","Tailwind CSS","Python","FastAPI","Google Gemini"],
+    status: "LIVE",
     github: "https://github.com/nylaimanii/docbuddy"
   },
   {
-    name: "Gesture-Controlled Educational Game",
-    tagline: "Computer Vision Game for Kids",
-    stack: ["Python", "OpenCV", "MediaPipe Hands"],
-    status: "COMPLETED",
-    category: "games",
-    description: "Number-matching game controlled by real-time hand gestures via webcam. Drag-and-drop physics, collision detection. Designed for children ages 3+."
-  },
-  {
-    name: "Emotional Regulation Game for Kids",
-    tagline: "Therapeutic Game Design",
-    stack: ["Python", "Game Design", "UI/UX"],
-    status: "COMPLETED",
-    category: "games",
-    description: "Helps neurodivergent children practice emotional regulation through calming gameplay. Combines psychology, accessible UX, and software engineering."
+    name: "RESUMEPRO",
+    subtitle: "AI Resume Analyzer & Builder",
+    description: "Deterministic ATS scoring across 6 measurable factors with keyword matching against a 350+ skill taxonomy. AI suggestions with before/after diff, one-click apply, 3 ATS-safe resume templates, and tailored cover letter generation with tone slider.",
+    stack: ["Next.js 15","TypeScript","Tailwind CSS","shadcn/ui","Supabase","Groq LLaMA 3.3","React PDF"],
+    status: "LIVE",
+    github: "https://github.com/nylaimanii/resumepro"
   }
 ];
 

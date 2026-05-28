@@ -679,8 +679,9 @@
 }
 .project-status--winner {
   color: #fff;
-  background: var(--accent);
-  border: 1px solid var(--accent);
+  background: var(--accent-2);
+  border: 1px solid var(--accent-2);
+  font-weight: 700;
 }
 
 .project-desc {

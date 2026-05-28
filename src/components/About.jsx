@@ -11,26 +11,27 @@ export default function About() {
       <div className="about-grid">
         <div className="about-bio">
           <p>
-            I&apos;m Nyla Wilson — a 20-year-old Computer Science student at
-            Camden County College, building full-stack and AI projects that
-            solve real problems. I&apos;m <em className="bio-highlight">self-taught</em>{' '}
-            across most of what I know, and I&apos;ve been{' '}
-            <em className="bio-highlight">building solo</em> since before I
-            ever took a CS class.
+            I&apos;m Nyla Wilson — a 20-year-old CS student at Camden
+            County College and a{' '}
+            <em className="bio-highlight">self-taught</em> full-stack and
+            AI developer. I&apos;ve been building real projects since
+            before I ever stepped into a classroom for it.
           </p>
           <p>
-            My dad <em className="bio-highlight">immigrated from Panama</em>{' '}
-            and built a career as a senior software engineer at IBM and
-            Microsoft. Watching him taught me that this field rewards{' '}
-            <em className="bio-highlight">persistence above everything else</em>.
-            I&apos;ve tried to carry that with me.
+            I work across the full stack — React, Next.js, SvelteKit,
+            Python, TypeScript — and I&apos;m genuinely interested in AI,
+            not just as a buzzword but as something I{' '}
+            <em className="bio-highlight">actually build with</em>. LLM
+            APIs, simulations, computer vision, data pipelines. I pick up
+            whatever the project needs.
           </p>
           <p>
-            I care about building technology that&apos;s accessible and
-            useful — especially for people who are usually afterthoughts
-            in the design process. I{' '}
-            <em className="bio-highlight">show up to hackathons solo</em>,
-            I ship things, and I keep going.
+            I come from an immigrant family — my dad came from Panama and
+            built a career in enterprise software. That work ethic is in
+            everything I do. I{' '}
+            <em className="bio-highlight">show up to hackathons solo</em>,{' '}
+            <em className="bio-highlight">I ship</em>, and I don&apos;t
+            stop until it works.
           </p>
         </div>
 
