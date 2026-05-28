@@ -210,9 +210,10 @@ export const hackathons = [
     location: "New Haven, CT",
     date: "April 2026",
     track: "Solo Build · 5 Tracks Submitted",
-    placement: "INTERNSHIP + DEPLOYMENT OFFER",
+    placement: null,
     project: "RIPPLE",
-    description: "Built RIPPLE solo — AI-powered cinematic interactive history experience using K2 Think V2, Groq LLaMA 3.3, Gemini 1.5 Flash, Mapbox GL JS, Supabase, and Web Speech API. Received a summer internship offer from Actual Foods and a product deployment offer from K2 Think V2 at the event itself.",
+    description: "Built RIPPLE solo — an AI-powered interactive history experience using K2 Think V2, Groq LLaMA 3.3, Gemini 1.5 Flash, Mapbox GL JS, Supabase, and Web Speech API. RIPPLE was featured by the Institute of Foundation Models (IFM) as part of the K2 Think V2 demo series.",
+    note: null,
     devpost: "https://devpost.com/nylaimanii7"
   },
   {
@@ -220,11 +221,11 @@ export const hackathons = [
     location: "Washington, D.C.",
     date: "February 2026",
     track: "Sustainability Track (Powered by Cisco)",
-    placement: "2ND PLACE WINNER",
+    placement: "WINNER",
     project: "GREENSPACE",
-    description: "Won the Sustainability Track with GREENSPACE — Google Gemini AI evaluates eco-friendly user photos and awards Green Score points. Built the full Community tab, photo feed and like system, backend improvements, and the core Gemini AI prompt.",
-    devpost: "https://devpost.com/nylaimanii7",
-    github: "https://github.com/Agent-AA/greenspace"
+    description: "Won the Sustainability Track with GREENSPACE — built the full Community tab, photo feed and like system, backend improvements, and the core Gemini AI prompt that evaluates eco-action photos and awards Green Score points.",
+    note: "Win led directly to a Software Engineering internship offer at Origin Foundation, NYC — Summer 2026",
+    devpost: "https://devpost.com/nylaimanii7"
   },
   {
     event: "HackHERS 2026 — Rutgers University",
@@ -233,9 +234,9 @@ export const hackathons = [
     track: "Rutgers Women in Computer Science · 24-Hour Hackathon",
     placement: null,
     project: "DOCBUDDY",
-    description: "Built DOCBUDDY with a team of 5 — AI web app analyzing legal and financial documents with plain-language risk summaries. Owned the entire frontend: React components, Framer Motion animations, Tailwind CSS, and Figma-to-code implementation.",
-    devpost: "https://devpost.com/nylaimanii7",
-    github: "https://github.com/nylaimanii/docbuddy"
+    description: "Built DOCBUDDY with a team — AI web app that analyzes legal and financial documents and returns plain-language risk summaries. Owned the entire frontend: React, Framer Motion, Tailwind CSS.",
+    note: null,
+    devpost: "https://devpost.com/nylaimanii7"
   }
 ];
 
