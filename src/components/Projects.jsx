@@ -18,7 +18,7 @@ function statusLabel(status = '') {
 
 export default function Projects() {
   return (
-    <Window title="✦ PROJECTS.dir" id="projects" index={4}>
+    <Window title="✦ PROJECTS.dir" id="projects" index={3}>
       <motion.div className="projects-grid" layout>
         {projects.map((proj) => (
           <motion.div

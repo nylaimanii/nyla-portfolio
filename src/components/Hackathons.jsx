@@ -17,7 +17,7 @@ const META = {
 
 export default function Hackathons() {
   return (
-    <Window title="★ HACKATHONS.log" id="hackathons" index={5}>
+    <Window title="★ HACKATHONS.log" id="hackathons" index={2}>
       <div className="hackathons-list">
         {hackathons.map((h) => {
           const meta = META[h.event] || {};

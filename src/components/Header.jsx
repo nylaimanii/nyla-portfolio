@@ -51,10 +51,6 @@ export default function Header() {
               </button>
             ))}
           </div>
-          <span className="nav-availability">
-            <span className="nav-availability-dot" />
-            Available for internships
-          </span>
         </div>
       </nav>
 
@@ -132,9 +128,11 @@ export default function Header() {
             initial="hidden"
             animate="show"
           >
-            <div className="hero-image-wrap">
-              <img className="hero-image" src={heroImg} alt="Nyla Wilson" />
-            </div>
+            <img
+              src={heroImg}
+              alt="Nyla Wilson"
+              className="hero-photo"
+            />
           </motion.div>
         </div>
       </header>

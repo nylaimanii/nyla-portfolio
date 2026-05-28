@@ -50,7 +50,7 @@ export default function Contact() {
   };
 
   return (
-    <Window title="♥ CONTACT.exe" id="contact" index={6}>
+    <Window title="♥ CONTACT.exe" id="contact" index={5}>
       <Confetti trigger={confettiTrigger} />
       <div className="contact-grid">
         <form className="contact-form" onSubmit={handleSubmit} noValidate>

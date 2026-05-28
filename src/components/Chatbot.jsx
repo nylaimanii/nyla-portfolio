@@ -73,7 +73,7 @@ export default function Chatbot() {
   };
 
   return (
-    <Window title="✦ NYLA_BOT.ai" id="chatbot" index={7}>
+    <Window title="✦ NYLA_BOT.ai" id="chatbot" index={6}>
       <div className="chatbot-wrapper">
         <div className="chat-history">
           {messages.map((msg, i) => (
