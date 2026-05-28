@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { personalInfo } from '../constants/data';
 import heroImg from '../assets/hero.png';
+import Bow from './Bow';
 
 const NAV_ITEMS = [
   { id: 'about',      label: 'ABOUT' },
@@ -128,11 +129,16 @@ export default function Header() {
             initial="hidden"
             animate="show"
           >
-            <img
-              src={heroImg}
-              alt="Nyla Wilson"
-              className="hero-photo"
-            />
+            <div className="hero-photo-wrap">
+              <img
+                src={heroImg}
+                alt="Nyla Wilson"
+                className="hero-photo"
+              />
+              <span className="hero-photo-bow">
+                <Bow delay="0.5s" />
+              </span>
+            </div>
           </motion.div>
         </div>
       </header>

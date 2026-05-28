@@ -1,4 +1,5 @@
 import Window from './Window';
+import Bow from './Bow';
 import { hackathons } from '../constants/data';
 
 export default function Hackathons() {
@@ -13,8 +14,11 @@ export default function Hackathons() {
                 <div className="hack-place">{h.location} · {h.date}</div>
               </div>
               {h.placement && (
-                <span className="hack-placement-badge hack-placement-badge--win">
-                  {h.placement}
+                <span className="hack-placement-wrap">
+                  <Bow delay="1.5s" />
+                  <span className="hack-placement-badge hack-placement-badge--win">
+                    {h.placement}
+                  </span>
                 </span>
               )}
             </div>

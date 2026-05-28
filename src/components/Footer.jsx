@@ -1,4 +1,5 @@
 import { personalInfo } from '../constants/data';
+import Bow from './Bow';
 
 export default function Footer() {
   return (
@@ -7,6 +8,9 @@ export default function Footer() {
         <div className="footer-name">
           Nyla <em>Wilson</em>
         </div>
+        <span className="footer-bow">
+          <Bow delay="1s" />
+        </span>
         <div className="footer-made">
           Designed &amp; built by Nyla Wilson · 2026
         </div>

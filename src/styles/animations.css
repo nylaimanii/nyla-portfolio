@@ -37,3 +37,8 @@
 @keyframes loaderFadeOut {
   to { opacity: 0; visibility: hidden; }
 }
+
+@keyframes bowWiggle {
+  0%, 100% { transform: rotate(-3deg) scale(1); }
+  50%      { transform: rotate(3deg) scale(1.05); }
+}

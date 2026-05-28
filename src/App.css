@@ -1,6 +1,53 @@
 @import './styles/animations.css';
 
 /* ═══════════════════════════════════════
+   BOW DECORATION
+═══════════════════════════════════════ */
+
+.bow {
+  display: inline-block;
+  width: 36px;
+  height: auto;
+  opacity: 0.9;
+  vertical-align: middle;
+  animation: bowWiggle 3s ease-in-out infinite;
+  transform-origin: 50% 50%;
+  pointer-events: none;
+}
+
+.section-title-bow {
+  margin-left: 14px;
+  position: relative;
+  top: -2px;
+}
+
+.hero-photo-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.hero-photo-bow {
+  position: absolute;
+  top: -16px;
+  right: -10px;
+  z-index: 2;
+  transform: rotate(-15deg);
+}
+
+.footer-bow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-bow .bow { opacity: 0.85; }
+
+.hack-placement-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ═══════════════════════════════════════
    GLOBAL HELPERS
 ═══════════════════════════════════════ */
 

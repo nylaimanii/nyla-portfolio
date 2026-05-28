@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import Window from './Window';
+import Bow from './Bow';
 import { projects } from '../constants/data';
 
 function statusClass(status = '') {
@@ -18,7 +19,12 @@ function statusLabel(status = '') {
 
 export default function Projects() {
   return (
-    <Window title="✦ PROJECTS.dir" id="projects" index={3}>
+    <Window
+      title="✦ PROJECTS.dir"
+      id="projects"
+      index={3}
+      titleAdornment={<Bow delay="0s" className="section-title-bow" />}
+    >
       <motion.div className="projects-grid" layout>
         {projects.map((proj) => (
           <motion.div
