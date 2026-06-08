@@ -224,7 +224,6 @@ export const hackathons = [
     placement: "WINNER",
     project: "GREENSPACE",
     description: "Won the Sustainability Track with GREENSPACE — built the full Community tab, photo feed and like system, backend improvements, and the core Gemini AI prompt that evaluates eco-action photos and awards Green Score points.",
-    note: "Win led directly to a Software Engineering internship offer at Origin Foundation, NYC — Summer 2026",
     devpost: "https://devpost.com/nylaimanii7"
   },
   {

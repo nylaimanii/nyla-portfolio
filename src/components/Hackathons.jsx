@@ -30,10 +30,6 @@ export default function Hackathons() {
 
             <p className="hack-desc">{h.description}</p>
 
-            {h.note && (
-              <div className="hack-note">{h.note}</div>
-            )}
-
             {(h.devpost || h.github) && (
               <div className="hack-links">
                 {h.devpost && (
