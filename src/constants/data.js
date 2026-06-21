@@ -102,6 +102,14 @@ export const experience = [
 
 export const projects = [
   {
+    name: "GREENSPACE",
+    subtitle: "Sustainability Social Platform",
+    description: "AI-powered community app where Gemini evaluates eco-action photos and builds competitive Green Score leaderboards. Won Georgetown Hoya Hacks 2026 Sustainability Track powered by Cisco.",
+    stack: ["TypeScript", "React", "Vite", "Node.js", "Drizzle ORM", "Google Gemini AI"],
+    status: "WINNER",
+    github: "https://github.com/nylaimanii/greenspace"
+  },
+  {
     name: "ASSAY",
     subtitle: "Closed-Loop Scientific Discovery Engine",
     description: "Closed-loop discovery engine: Groq proposes equations, a Pyodide sandbox judges the fit. The LLM never grades itself — math lives in the sandbox, narration lives in the model.",
@@ -201,14 +209,6 @@ export const projects = [
     status: "LIVE",
     github: "https://github.com/nylaimanii/ripple",
     live: "https://ripple-six-omega.vercel.app"
-  },
-  {
-    name: "GREENSPACE",
-    subtitle: "Sustainability Social Platform",
-    description: "AI-powered community app where Gemini evaluates eco-action photos and builds competitive Green Score leaderboards. Won Georgetown Hoya Hacks 2026 Sustainability Track powered by Cisco.",
-    stack: ["TypeScript", "React", "Vite", "Node.js", "Drizzle ORM", "Google Gemini AI"],
-    status: "WINNER",
-    github: "https://github.com/nylaimanii/greenspace"
   },
   {
     name: "DOCBUDDY",
