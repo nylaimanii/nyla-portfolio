@@ -183,9 +183,8 @@ export const projects = [
     subtitle: "Incident Response Agent",
     description: "An incident response agent architecturally incapable of lying — hash-chained evidence receipts, read-only OS-layer mounting. Built for the SANS Institute FIND EVIL! hackathon.",
     stack: ["Python"],
-    status: "LIVE",
-    github: "https://github.com/nylaimanii/sworn",
-    live: "https://sworn.vercel.app"
+    status: "GITHUB",
+    github: "https://github.com/nylaimanii/sworn"
   },
   {
     name: "RIPPLE",
@@ -201,7 +200,7 @@ export const projects = [
     subtitle: "AI Legal Document Analyzer",
     description: "Paste a confusing financial doc — lease, loan, rental — and DOCBUDDY breaks it into plain English: summary, pros/cons, deadlines, real costs, and a risk score. Built at HackHERS 2026 (Rutgers).",
     stack: ["React", "Framer Motion", "Tailwind CSS", "Python", "FastAPI", "Google Gemini"],
-    status: "LIVE",
+    status: "GITHUB",
     github: "https://github.com/nylaimanii/docbuddy"
   }
 ];

@@ -762,6 +762,15 @@
   border: 1px solid var(--accent-2);
   font-weight: 700;
 }
+.project-status--github {
+  color: var(--text-muted);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  border-radius: 999px;
+  padding: 3px 10px;
+}
 
 .project-desc {
   font-family: var(--font-body);
