@@ -47,6 +47,13 @@
   gap: 10px;
 }
 
+.bow.project-bow {
+  width: 28px;
+  height: auto;
+  animation: bowWiggle 3s ease-in-out infinite;
+  animation-delay: 0s;
+}
+
 /* ═══════════════════════════════════════
    GLOBAL HELPERS
 ═══════════════════════════════════════ */

@@ -94,7 +94,8 @@ export const projects = [
     description: "Closed-loop discovery engine: Groq proposes equations, a Pyodide sandbox judges the fit. The LLM never grades itself — math lives in the sandbox, narration lives in the model.",
     stack: ["TypeScript", "Groq", "Pyodide", "Next.js"],
     status: "LIVE",
-    github: "https://github.com/nylaimanii/assay"
+    github: "https://github.com/nylaimanii/assay",
+    live: "https://assay-alpha.vercel.app"
   },
   {
     name: "KERF",
@@ -102,7 +103,8 @@ export const projects = [
     description: "The chip supply chain's biggest chokepoints mapped from public data. Every number says where it came from and how much to trust it. Built for transparency in semiconductor risk analysis.",
     stack: ["TypeScript", "Next.js", "Cytoscape", "Data", "Risk Analysis"],
     status: "LIVE",
-    github: "https://github.com/nylaimanii/kerf"
+    github: "https://github.com/nylaimanii/kerf",
+    live: "https://kerf-kappa.vercel.app"
   },
   {
     name: "NEST",
@@ -137,7 +139,8 @@ export const projects = [
     description: "Train a neural network in your browser, then x-ray it to see what each neuron actually learned. TensorFlow Playground for the interpretability era — sparse autoencoders, attribution graphs, no PhD required.",
     stack: ["Next.js", "TypeScript", "TensorFlow.js", "Tailwind CSS"],
     status: "LIVE",
-    github: "https://github.com/nylaimanii/peek"
+    github: "https://github.com/nylaimanii/peek",
+    live: "https://peek-two.vercel.app"
   },
   {
     name: "FORGE",
@@ -154,7 +157,8 @@ export const projects = [
     description: "Run compute when it's clean and cheap — picks the optimal time and region for GPU/ML jobs using live grid carbon and price data across North America. Interactive globe, sliding-window optimization.",
     stack: ["React", "Three.js", "TypeScript", "Mapbox GL JS", "Groq"],
     status: "LIVE",
-    github: "https://github.com/nylaimanii/moirai"
+    github: "https://github.com/nylaimanii/moirai",
+    live: "https://moirai-smoky.vercel.app"
   },
   {
     name: "AQUIFER",
@@ -162,7 +166,8 @@ export const projects = [
     description: "Tells farmers the minimum water needed to keep yield stable using FAO-56 Penman-Monteith math plus free public weather and soil data. Built for water conservation in climate-stressed regions.",
     stack: ["TypeScript", "FAO-56", "Climate Data", "AI"],
     status: "LIVE",
-    github: "https://github.com/nylaimanii/aquifer"
+    github: "https://github.com/nylaimanii/aquifer",
+    live: "https://aquifer-seven.vercel.app"
   },
   {
     name: "MERIDIAN",
@@ -170,7 +175,8 @@ export const projects = [
     description: "Tinder for clinical trials — fill out a quick intake, then swipe through recruiting trials matched to your condition, age, and location. Pulls live from ClinicalTrials.gov (200k+ studies). Built solo.",
     stack: ["Meteor.js", "React", "Groq API", "rspack", "Docker", "Railway"],
     status: "LIVE",
-    github: "https://github.com/nylaimanii/meridian"
+    github: "https://github.com/nylaimanii/meridian",
+    live: "https://meridian.up.railway.app"
   },
   {
     name: "SWORN",
@@ -178,7 +184,8 @@ export const projects = [
     description: "An incident response agent architecturally incapable of lying — hash-chained evidence receipts, read-only OS-layer mounting. Built for the SANS Institute FIND EVIL! hackathon.",
     stack: ["Python"],
     status: "LIVE",
-    github: "https://github.com/nylaimanii/sworn"
+    github: "https://github.com/nylaimanii/sworn",
+    live: "https://sworn.vercel.app"
   },
   {
     name: "RIPPLE",

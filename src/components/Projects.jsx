@@ -3,6 +3,10 @@ import Window from './Window';
 import Bow from './Bow';
 import { projects } from '../constants/data';
 
+function isWinner(status = '') {
+  return status.toLowerCase().includes('winner');
+}
+
 function statusClass(status = '') {
   const s = status.toLowerCase();
   if (s.includes('winner')) return 'project-status project-status--winner';
@@ -41,9 +45,18 @@ export default function Projects() {
                 <div className="project-name">{proj.name}</div>
                 {proj.subtitle && <div className="project-tagline">{proj.subtitle}</div>}
               </div>
-              <span className={statusClass(proj.status)}>
-                {statusLabel(proj.status)}
-              </span>
+              {isWinner(proj.status) ? (
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <Bow delay="0s" className="project-bow" />
+                  <span className={statusClass(proj.status)}>
+                    {statusLabel(proj.status)}
+                  </span>
+                </div>
+              ) : (
+                <span className={statusClass(proj.status)}>
+                  {statusLabel(proj.status)}
+                </span>
+              )}
             </div>
 
             <p className="project-desc">{proj.description}</p>
