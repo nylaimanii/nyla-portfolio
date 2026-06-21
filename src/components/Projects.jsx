@@ -22,7 +22,7 @@ export default function Projects() {
     <Window
       title="✦ PROJECTS.dir"
       id="projects"
-      index={3}
+      index={4}
       titleAdornment={<Bow delay="0s" className="section-title-bow" />}
     >
       <motion.div className="projects-grid" layout>

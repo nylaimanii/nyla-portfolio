@@ -53,50 +53,29 @@ export const education = [
 
 export const experience = [
   {
+    company: "ActualFood",
     role: "Software Engineering Intern",
+    type: "Internship",
+    date: "May 2026 – Present",
+    location: "New York City, NY",
+    badge: "CURRENT"
+  },
+  {
     company: "Origin Foundation",
-    location: "New York City, NY",
-    date: "Summer 2026",
-    type: "INTERNSHIP",
-    bullets: [
-      "Selected following standout solo performance at YHack (Yale University, Spring 2026).",
-      "Contributing to AI-powered and full-stack web application development in a professional engineering environment.",
-      "Applying skills in React, Node.js, Python, and REST APIs to real production projects."
-    ]
-  },
-  {
     role: "Software Engineering Intern",
-    company: "Actual Foods",
+    type: "Internship",
+    date: "May 2026 – Present",
     location: "New York City, NY",
-    date: "Summer 2026",
-    type: "INTERNSHIP",
-    bullets: [
-      "Offered internship directly following RIPPLE's recognition at YHack (Yale University, Spring 2026).",
-      "Supporting full-stack development and AI integration initiatives within the engineering team."
-    ]
+    badge: "CURRENT"
   },
   {
-    role: "Independent Software Developer",
     company: "Self-Employed",
-    location: "NYC Metro Area",
-    date: "August 2025 — Present",
-    type: "CURRENT",
-    bullets: [
-      "Designed and shipped 7+ full-stack and AI-powered projects across React, SvelteKit, Next.js, Python, and multiple LLM APIs.",
-      "Mentored by a senior software engineer (IBM, Microsoft) in clean code, system design, and scalable architecture."
-    ]
-  },
-  {
-    role: "Mentee — Senior Software Engineer (Father)",
-    company: "Ongoing Mentorship",
-    location: "Personal",
-    date: "Ongoing",
-    type: "MENTORSHIP",
-    bullets: [
-      "M.S. Computer Science, Temple University.",
-      "Industry experience: IBM, Microsoft, DXC, Lockheed Martin, Avanade, Argano & more.",
-      "Ongoing mentorship in clean code, debugging discipline, system design, and long-term code maintainability."
-    ]
+    role: "Independent Software Developer",
+    type: "Freelance",
+    date: "Aug 2025 – Present",
+    location: "NYC Metro",
+    description: "Designed and shipped 10+ full-stack and AI-powered projects across React, Next.js, SvelteKit, Python, and multiple LLM APIs. Competed in 5+ hackathons earning 2 awards.",
+    badge: "ONGOING"
   }
 ];
 

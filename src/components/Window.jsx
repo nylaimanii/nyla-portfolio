@@ -4,7 +4,7 @@ import '../styles/windows.css';
 const TITLE_OVERRIDES = {
   '♥ ABOUT.exe':      'About',
   '★ EDUCATION.log':  'Education',
-  '✦ EXPERIENCE.log': 'Experience',
+  '✦ EXPERIENCE.log': 'Work',
   '✦ SKILLS.matrix':  'Skills',
   '✦ PROJECTS.dir':   'Projects',
   '★ HACKATHONS.log': 'Hackathons',

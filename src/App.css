@@ -478,7 +478,7 @@
 .exp-role {
   font-family: var(--font-display);
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--text);
 }
 
@@ -492,6 +492,36 @@
   border: 1px solid var(--border-pink);
   border-radius: 999px;
   background: var(--bg);
+}
+
+.exp-badge {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.4px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  text-transform: uppercase;
+}
+.exp-badge--current {
+  background: var(--accent);
+  color: #fff;
+  border: 1px solid var(--accent);
+}
+.exp-badge--ongoing {
+  background: transparent;
+  color: var(--accent-2-dark);
+  border: 1px solid var(--accent-2);
+}
+
+.exp-desc {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-top: 4px;
 }
 
 .exp-company {

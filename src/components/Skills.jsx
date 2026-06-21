@@ -18,7 +18,7 @@ export default function Skills() {
   const toggle = (key) => setOpen(prev => ({ ...prev, [key]: !prev[key] }));
 
   return (
-    <Window title="✦ SKILLS.matrix" id="skills" index={4}>
+    <Window title="✦ SKILLS.matrix" id="skills" index={5}>
       <div className="skills-grid">
         {skillCategories.map(cat => {
           const isOpen = open[cat.key];

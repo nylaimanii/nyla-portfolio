@@ -4,7 +4,7 @@ import { hackathons } from '../constants/data';
 
 export default function Hackathons() {
   return (
-    <Window title="★ HACKATHONS.log" id="hackathons" index={2}>
+    <Window title="★ HACKATHONS.log" id="hackathons" index={3}>
       <div className="hackathons-list">
         {hackathons.map((h) => (
           <article key={h.event} className="hack-card">
