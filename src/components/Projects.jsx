@@ -59,12 +59,12 @@ export default function Projects() {
             {(proj.live || proj.github) && (
               <div className="project-links">
                 {proj.live && (
-                  <a className="project-link" href={proj.live} target="_blank" rel="noreferrer">
+                  <a className="project-link" href={proj.live} target="_blank" rel="noopener noreferrer">
                     ↗ View Live
                   </a>
                 )}
                 {proj.github && (
-                  <a className="project-link project-link--muted" href={proj.github} target="_blank" rel="noreferrer">
+                  <a className="project-link project-link--muted" href={proj.github} target="_blank" rel="noopener noreferrer">
                     ↗ GitHub
                   </a>
                 )}

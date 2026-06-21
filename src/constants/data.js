@@ -102,10 +102,26 @@ export const experience = [
 
 export const projects = [
   {
+    name: "ASSAY",
+    subtitle: "Closed-Loop Scientific Discovery Engine",
+    description: "Closed-loop discovery engine: Groq proposes equations, a Pyodide sandbox judges the fit. The LLM never grades itself — math lives in the sandbox, narration lives in the model.",
+    stack: ["TypeScript", "Groq", "Pyodide", "Next.js"],
+    status: "LIVE",
+    github: "https://github.com/nylaimanii/assay"
+  },
+  {
+    name: "KERF",
+    subtitle: "Semiconductor Supply Chain Risk Map",
+    description: "The chip supply chain's biggest chokepoints mapped from public data. Every number says where it came from and how much to trust it. Built for transparency in semiconductor risk analysis.",
+    stack: ["TypeScript", "Next.js", "Cytoscape", "Data", "Risk Analysis"],
+    status: "LIVE",
+    github: "https://github.com/nylaimanii/kerf"
+  },
+  {
     name: "NEST",
     subtitle: "Family Planning Financial OS",
-    description: "Personal finance and family planning simulator — models real income, childcare costs, housing, and life decisions with honest projections and place-comparison maps. Hyperlocal cost data, AI-powered scenario analysis via Groq, and interactive charts that surface the real numbers behind major life decisions.",
-    stack: ["Next.js 15","TypeScript","Tailwind v4","shadcn/ui","Groq","Zustand","MapLibre","Recharts","Vercel"],
+    description: "A planning instrument for the kids you want — real tax math, sourced city data, and the five questions nobody asks. Models real income, childcare costs, housing, and life decisions with honest projections.",
+    stack: ["Next.js 15", "TypeScript", "Tailwind v4", "shadcn/ui", "Groq", "Zustand", "MapLibre", "Recharts"],
     status: "LIVE",
     github: "https://github.com/nylaimanii/nest",
     live: "https://nest-eight-theta.vercel.app"
@@ -113,26 +129,34 @@ export const projects = [
   {
     name: "HAVEN",
     subtitle: "Personal Climate Adaptation App",
-    description: "Hyperlocal heat, flood, and air-quality risk navigator tuned to who you are and where you live — built for climate adaptation, not prevention. Real climate data layered on interactive maps with AI-powered personal risk summaries and actionable recommendations.",
-    stack: ["Next.js 15","TypeScript","Tailwind v4","MapLibre","deck.gl","Groq","Vercel"],
+    description: "Hyperlocal heat, flood, and air-quality risk navigator tuned to who you are and where you live — built for climate adaptation, not prevention. Real climate data on interactive maps with AI-powered risk summaries.",
+    stack: ["Next.js 15", "TypeScript", "Tailwind v4", "MapLibre", "deck.gl", "Groq"],
     status: "LIVE",
     github: "https://github.com/nylaimanii/haven",
-    live: "https://haven-delta.vercel.app"
+    live: "https://haven-delta-ten.vercel.app"
   },
   {
     name: "RESISTANCE",
     subtitle: "Antibiotic Resistance Simulator",
-    description: "Watch bacteria evolve drug resistance in real time — tune the biology with sliders, run the simulation, then ask an AI tutor what's happening. Teaches the 'don't stop your antibiotics early' lesson live through a logistic growth engine, drug decay curves, and resistance mutation modeling.",
-    stack: ["Next.js 15","TypeScript","Tailwind v4","Zustand","Recharts","Groq LLaMA 3.3","Vercel"],
+    description: "Watch bacteria evolve drug resistance in real time — tune the biology with sliders, run the simulation, then ask an AI tutor what's happening. Teaches the 'don't stop your antibiotics early' lesson live.",
+    stack: ["Next.js 15", "TypeScript", "Tailwind v4", "Zustand", "Recharts", "Groq LLaMA 3.3"],
     status: "LIVE",
     github: "https://github.com/nylaimanii/resistance",
     live: "https://resistance-psi.vercel.app"
   },
   {
+    name: "PEEK",
+    subtitle: "Neural Network Interpretability Playground",
+    description: "Train a neural network in your browser, then x-ray it to see what each neuron actually learned. TensorFlow Playground for the interpretability era — sparse autoencoders, attribution graphs, no PhD required.",
+    stack: ["Next.js", "TypeScript", "TensorFlow.js", "Tailwind CSS"],
+    status: "LIVE",
+    github: "https://github.com/nylaimanii/peek"
+  },
+  {
     name: "FORGE",
-    subtitle: "AI Database Builder",
-    description: "Browser-based relational database builder — design schemas on a drag-and-drop canvas, query in SQL or plain English, explore data visually. No config, no migrations. AI schema generation via Groq, live data cards on tldraw infinite canvas, full Supabase Auth — built entirely on free-tier services.",
-    stack: ["SvelteKit","TypeScript","Tailwind v4","Supabase","Groq LLaMA 3.3","Monaco Editor","tldraw","Vercel"],
+    subtitle: "AI Visual Database Builder",
+    description: "Visual database builder — design schemas on a drag-and-drop canvas, query in SQL or plain English, explore your data visually. No config, no migrations. Built entirely on free-tier services.",
+    stack: ["SvelteKit", "TypeScript", "Tailwind v4", "Supabase", "Groq LLaMA 3.3", "Monaco Editor", "tldraw"],
     status: "LIVE",
     github: "https://github.com/nylaimanii/forge",
     live: "https://forge-omega-three.vercel.app"
@@ -140,32 +164,40 @@ export const projects = [
   {
     name: "MOIRAI",
     subtitle: "Carbon-Aware GPU Scheduler",
-    description: "Run compute when it's clean and cheap — picks the optimal time and region for GPU/ML jobs using live grid carbon and price data across North America. Interactive globe showing real-time carbon intensity by region; sliding-window optimization engine finds the cleanest scheduling window.",
-    stack: ["React","Three.js","TypeScript","Mapbox GL JS","Groq","Vercel"],
+    description: "Run compute when it's clean and cheap — picks the optimal time and region for GPU/ML jobs using live grid carbon and price data across North America. Interactive globe, sliding-window optimization.",
+    stack: ["React", "Three.js", "TypeScript", "Mapbox GL JS", "Groq"],
     status: "LIVE",
     github: "https://github.com/nylaimanii/moirai"
   },
   {
-    name: "PEEK",
-    subtitle: "Neural Network Interpretability Playground",
-    description: "Train a neural network in your browser, then x-ray it to see what each neuron actually learned. Makes frontier mechanistic interpretability research accessible to beginners — sparse autoencoders, attribution graphs, no PhD required.",
-    stack: ["Next.js","TypeScript","TensorFlow.js","Tailwind CSS","Vercel"],
+    name: "AQUIFER",
+    subtitle: "AI Irrigation Advisor",
+    description: "Tells farmers the minimum water needed to keep yield stable using FAO-56 Penman-Monteith math plus free public weather and soil data. Built for water conservation in climate-stressed regions.",
+    stack: ["TypeScript", "FAO-56", "Climate Data", "AI"],
     status: "LIVE",
-    github: "https://github.com/nylaimanii/peek"
+    github: "https://github.com/nylaimanii/aquifer"
   },
   {
     name: "MERIDIAN",
     subtitle: "Clinical Trial Matcher",
-    description: "Tinder for clinical trials — fill out a quick intake, then swipe through recruiting trials matched to your condition, age, and location. Pulls live data from ClinicalTrials.gov (200k+ studies) with Groq powering plain-language summaries and matching. Built solo.",
-    stack: ["Meteor.js","React","Groq API","rspack","Docker","Railway"],
+    description: "Tinder for clinical trials — fill out a quick intake, then swipe through recruiting trials matched to your condition, age, and location. Pulls live from ClinicalTrials.gov (200k+ studies). Built solo.",
+    stack: ["Meteor.js", "React", "Groq API", "rspack", "Docker", "Railway"],
     status: "LIVE",
     github: "https://github.com/nylaimanii/meridian"
   },
   {
+    name: "SWORN",
+    subtitle: "Incident Response Agent",
+    description: "An incident response agent architecturally incapable of lying — hash-chained evidence receipts, read-only OS-layer mounting. Built for the SANS Institute FIND EVIL! hackathon.",
+    stack: ["Python"],
+    status: "LIVE",
+    github: "https://github.com/nylaimanii/sworn"
+  },
+  {
     name: "RIPPLE",
     subtitle: "AI Interactive History Experience",
-    description: "Solo-built at YHack (Yale, 2026) — step into real historical moments as a decision-maker, watch choices ripple across a live 3D globe with documented real-world consequences. Features Human Cost Counter, Decision DNA profile, Mirror Moment, and real-time Regret Archive. Featured by IFM.",
-    stack: ["React 19","Vite","K2 Think V2","Groq","Gemini 1.5 Flash","Mapbox GL JS","Supabase","Web Speech API"],
+    description: "Type any moment in history, step inside it as a key decision-maker, and watch your choices ripple across the world. Built solo at YHack 2026 (Yale). Featured by the Institute of Foundation Models (IFM).",
+    stack: ["React 19", "Vite", "K2 Think V2", "Groq", "Gemini 1.5 Flash", "Mapbox GL JS", "Supabase", "Web Speech API"],
     status: "LIVE",
     github: "https://github.com/nylaimanii/ripple",
     live: "https://ripple-six-omega.vercel.app"
@@ -174,25 +206,17 @@ export const projects = [
     name: "GREENSPACE",
     subtitle: "Sustainability Social Platform",
     description: "AI-powered community app where Gemini evaluates eco-action photos and builds competitive Green Score leaderboards. Won Georgetown Hoya Hacks 2026 Sustainability Track powered by Cisco.",
-    stack: ["TypeScript","React","Vite","Node.js","Drizzle ORM","Google Gemini AI"],
+    stack: ["TypeScript", "React", "Vite", "Node.js", "Drizzle ORM", "Google Gemini AI"],
     status: "WINNER",
     github: "https://github.com/nylaimanii/greenspace"
   },
   {
     name: "DOCBUDDY",
     subtitle: "AI Legal Document Analyzer",
-    description: "Paste a confusing financial doc — lease, loan, rental — and DOCBUDDY breaks it into plain English: summary, pros/cons, deadlines, real costs, and a risk score. Built at HackHERS 2026.",
-    stack: ["React","Framer Motion","Tailwind CSS","Python","FastAPI","Google Gemini"],
+    description: "Paste a confusing financial doc — lease, loan, rental — and DOCBUDDY breaks it into plain English: summary, pros/cons, deadlines, real costs, and a risk score. Built at HackHERS 2026 (Rutgers).",
+    stack: ["React", "Framer Motion", "Tailwind CSS", "Python", "FastAPI", "Google Gemini"],
     status: "LIVE",
     github: "https://github.com/nylaimanii/docbuddy"
-  },
-  {
-    name: "RESUMEPRO",
-    subtitle: "AI Resume Analyzer & Builder",
-    description: "Deterministic ATS scoring across 6 measurable factors with keyword matching against a 350+ skill taxonomy. AI suggestions with before/after diff, one-click apply, 3 ATS-safe resume templates, and tailored cover letter generation with tone slider.",
-    stack: ["Next.js 15","TypeScript","Tailwind CSS","shadcn/ui","Supabase","Groq LLaMA 3.3","React PDF"],
-    status: "LIVE",
-    github: "https://github.com/nylaimanii/resumepro"
   }
 ];
 
