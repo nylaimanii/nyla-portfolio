@@ -12,25 +12,56 @@ export const personalInfo = {
 };
 
 export const skills = {
-  languages: ["Python", "JavaScript", "TypeScript", "Java", "C++", "SQL", "HTML", "CSS", "Rust", "Go"],
-  frontend: ["React", "Next.js", "SvelteKit", "Vite", "Tailwind CSS", "Framer Motion", "shadcn/ui"],
-  backend: ["Node.js", "FastAPI", "Express.js", "REST APIs", "Docker"],
-  ai: ["Groq (LLaMA 3.3)", "Google Gemini", "K2 Think V2", "Prompt Engineering", "RAG", "NLP"],
-  neural: ["CNNs", "EfficientNetV2", "ConvNeXt", "Model Training", "Fine-Tuning", "Inference Pipelines"],
-  data: ["NumPy", "Pandas", "OpenCV", "MediaPipe"],
-  databases: ["PostgreSQL", "Supabase", "Firebase", "MongoDB", "SQL", "Drizzle ORM"],
-  tools: ["Git", "GitHub", "Vercel", "Railway", "Docker", "Figma", "Mapbox GL JS"]
+  languages: [
+    "Python", "JavaScript", "TypeScript", "Java",
+    "C++", "SQL", "HTML", "CSS", "Rust", "Go"
+  ],
+  frontend: [
+    "React", "Next.js 15", "SvelteKit", "Vite",
+    "Tailwind CSS", "Tailwind v4", "Framer Motion",
+    "shadcn/ui", "lucide-react", "React Router"
+  ],
+  backend: [
+    "Node.js", "FastAPI", "Express.js", "Meteor.js",
+    "REST APIs", "Drizzle ORM", "Docker", "Railway"
+  ],
+  aiLlms: [
+    "Groq (LLaMA 3.3)", "Google Gemini 1.5",
+    "K2 Think V2", "Prompt Engineering", "RAG",
+    "NLP", "Cosine Similarity", "Web Speech API",
+    "Ollama", "OpenClaw", "NemoClaw"
+  ],
+  neuralNets: [
+    "CNNs", "EfficientNetV2", "ConvNeXt",
+    "TensorFlow.js", "Model Training", "Fine-Tuning",
+    "Inference Pipelines", "PPO", "Contextual Bandits",
+    "Reinforcement Learning"
+  ],
+  dataAndMl: [
+    "NumPy", "Pandas", "OpenCV", "MediaPipe",
+    "scikit-learn", "Cytoscape.js"
+  ],
+  databases: [
+    "Supabase", "PostgreSQL", "Firebase",
+    "MongoDB", "SQL", "Drizzle ORM"
+  ],
+  toolsAndDeploy: [
+    "Git", "GitHub", "Vercel", "Railway", "Docker",
+    "Figma", "Mapbox GL JS", "MapLibre", "deck.gl",
+    "Three.js", "tldraw", "Monaco Editor",
+    "Lens Studio", "Pyodide", "rspack"
+  ]
 };
 
 export const skillCategories = [
-  { key: 'languages', label: 'LANGUAGES',     accent: 'blue',     level: 5 },
-  { key: 'frontend',  label: 'FRONTEND',      accent: 'pink',     level: 5 },
-  { key: 'backend',   label: 'BACKEND',       accent: 'mint',     level: 4 },
-  { key: 'ai',        label: 'AI & LLMs',     accent: 'lavender', level: 5 },
-  { key: 'neural',    label: 'NEURAL NETS',   accent: 'peach',    level: 4 },
-  { key: 'data',      label: 'DATA & ML',     accent: 'yellow',   level: 4 },
-  { key: 'databases', label: 'DATABASES',     accent: 'mint',     level: 4 },
-  { key: 'tools',     label: 'TOOLS & DEPLOY',accent: 'blue',     level: 5 },
+  { key: 'languages',      label: 'LANGUAGES',      accent: 'blue',     level: 5 },
+  { key: 'frontend',       label: 'FRONTEND',       accent: 'pink',     level: 5 },
+  { key: 'backend',        label: 'BACKEND',        accent: 'mint',     level: 4 },
+  { key: 'aiLlms',         label: 'AI & LLMS',      accent: 'lavender', level: 5 },
+  { key: 'neuralNets',     label: 'NEURAL NETS',    accent: 'peach',    level: 4 },
+  { key: 'dataAndMl',      label: 'DATA & ML',      accent: 'yellow',   level: 4 },
+  { key: 'databases',      label: 'DATABASES',      accent: 'mint',     level: 4 },
+  { key: 'toolsAndDeploy', label: 'TOOLS & DEPLOY', accent: 'blue',     level: 5 },
 ];
 
 export const education = [
