@@ -3,18 +3,10 @@ import Bow from './Bow';
 import { hackathons } from '../constants/data';
 import speakingImg from '../assets/speaking.jpg';
 
-const headerPhoto = (
-  <img
-    className="hack-section-photo"
-    src={speakingImg}
-    alt="Nyla presenting at a hackathon"
-    loading="lazy"
-  />
-);
-
 export default function Hackathons() {
   return (
-    <Window title="★ HACKATHONS.log" id="hackathons" index={3} headerAside={headerPhoto}>
+    <>
+    <Window title="★ HACKATHONS.log" id="hackathons" index={3}>
       <div className="hackathons-list">
         {hackathons.map((h) => (
           <article key={h.event} className="hack-card">
@@ -69,5 +61,14 @@ export default function Hackathons() {
         ))}
       </div>
     </Window>
+
+    <img
+      className="hack-floating-photo"
+      src={speakingImg}
+      alt="Nyla presenting at a hackathon"
+      loading="lazy"
+      aria-hidden="true"
+    />
+    </>
   );
 }
