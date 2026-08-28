@@ -120,6 +120,14 @@ export const projects = [
     github: "https://github.com/nylaimanii/greenspace"
   },
   {
+    name: "SENTRY",
+    subtitle: "On-Device Adaptive Security Camera",
+    description: "Security camera that learns which alerts are worth your attention using a contextual bandit, no hardcoded rules, all on-device. Built at the Dell × NVIDIA × MongoDB Local AI Hackathon. Placed as finalist.",
+    stack: ["Python", "OpenCV", "NumPy", "Dell GB10", "NemoClaw", "OpenClaw"],
+    status: "FINALIST",
+    github: "https://github.com/nylaimanii/sentry"
+  },
+  {
     name: "HEADWAY",
     subtitle: "Reinforcement Learning Subway Simulator",
     description: "Trained PPO agents to space subway trains evenly on the L line, then ran the same policy on four lines they'd never seen, G, 7, 1, and 6. Built solo at the NYPL × MLH Built for NYC hackathon in under 24 hours.",
@@ -127,14 +135,6 @@ export const projects = [
     status: "LIVE",
     github: "https://github.com/nylaimanii/conductor",
     live: "https://conductor-seven-alpha.vercel.app"
-  },
-  {
-    name: "SENTRY",
-    subtitle: "On-Device Adaptive Security Camera",
-    description: "Security camera that learns which alerts are worth your attention using a contextual bandit, no hardcoded rules, all on-device. Built at the Dell × NVIDIA × MongoDB Local AI Hackathon. Placed as finalist.",
-    stack: ["Python", "OpenCV", "NumPy", "Dell GB10", "NemoClaw", "OpenClaw"],
-    status: "FINALIST",
-    github: "https://github.com/nylaimanii/sentry"
   },
   {
     name: "ASSAY",
