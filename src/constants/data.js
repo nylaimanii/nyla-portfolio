@@ -202,6 +202,23 @@ export const projects = [
     stack: ["React", "Framer Motion", "Tailwind CSS", "Python", "FastAPI", "Google Gemini"],
     status: "GITHUB",
     github: "https://github.com/nylaimanii/docbuddy"
+  },
+  {
+    name: "HEADWAY",
+    subtitle: "Reinforcement Learning Subway Simulator",
+    description: "Trained PPO agents to space subway trains evenly on the L line, then ran the same policy on four lines they'd never seen \u2014 G, 7, 1, and 6. Built solo at the NYPL \u00d7 MLH Built for NYC hackathon in under 24 hours.",
+    stack: ["Python", "Three.js", "Next.js", "PPO", "RL"],
+    status: "LIVE",
+    github: "https://github.com/nylaimanii/conductor",
+    live: "https://conductor-seven-alpha.vercel.app"
+  },
+  {
+    name: "SENTRY",
+    subtitle: "On-Device Adaptive Security Camera",
+    description: "Security camera that learns which alerts are worth your attention using a contextual bandit \u2014 no hardcoded rules, all on-device. Built at the Dell \u00d7 NVIDIA \u00d7 MongoDB Local AI Hackathon. Placed as finalist.",
+    stack: ["Python", "OpenCV", "NumPy", "Dell GB10", "NemoClaw", "OpenClaw"],
+    status: "LIVE",
+    github: "https://github.com/nylaimanii/sentry"
   }
 ];
 
@@ -221,7 +238,7 @@ export const hackathons = [
     track: "Solo Build · 5 Tracks Submitted",
     placement: null,
     project: "RIPPLE",
-    description: "Built RIPPLE solo — an AI-powered interactive history experience using K2 Think V2, Groq LLaMA 3.3, Gemini 1.5 Flash, Mapbox GL JS, Supabase, and Web Speech API. RIPPLE was featured by the Institute of Foundation Models (IFM) as part of the K2 Think V2 demo series.",
+    description: "Built RIPPLE solo — type any moment in history and step inside it as a decision-maker. Runs on K2 Think V2, Groq LLaMA 3.3, Gemini 1.5 Flash, Mapbox GL JS, and Supabase. The Institute of Foundation Models picked it up for their K2 Think V2 demo series.",
     note: null,
     devpost: "https://devpost.com/nylaimanii7"
   },
@@ -232,7 +249,7 @@ export const hackathons = [
     track: "Sustainability Track (Powered by Cisco)",
     placement: "WINNER",
     project: "GREENSPACE",
-    description: "Won the Sustainability Track with GREENSPACE — built the full Community tab, photo feed and like system, backend improvements, and the core Gemini AI prompt that evaluates eco-action photos and awards Green Score points.",
+    description: "Won the Sustainability Track with GREENSPACE. Built the Community tab, the photo feed and like system, the backend work, and the Gemini prompt that scores eco-action photos and hands out Green Score points.",
     devpost: "https://devpost.com/nylaimanii7"
   },
   {
@@ -242,21 +259,44 @@ export const hackathons = [
     track: "Rutgers Women in Computer Science · 24-Hour Hackathon",
     placement: null,
     project: "DOCBUDDY",
-    description: "Built DOCBUDDY with a team — AI web app that analyzes legal and financial documents and returns plain-language risk summaries. Owned the entire frontend: React, Framer Motion, Tailwind CSS.",
+    description: "Built DOCBUDDY with a team — paste a lease or a loan doc and it hands back the plain-English version plus a risk score. I did the whole frontend: React, Framer Motion, Tailwind CSS.",
     note: null,
     devpost: "https://devpost.com/nylaimanii7"
+  },
+  {
+    event: "NYPL × MLH — Built for NYC",
+    location: "New York, NY",
+    date: "August 2026",
+    track: "Solo Build · 24-Hour Hackathon",
+    placement: null,
+    project: "HEADWAY",
+    description: "Built a reinforcement learning subway simulator solo in under 24 hours. Trained PPO agents to space subway trains evenly on the L line, then ran the same policy on four other lines it had never seen — and it held up.",
+    note: null,
+    live: "https://conductor-seven-alpha.vercel.app",
+    github: "https://github.com/nylaimanii/conductor"
+  },
+  {
+    event: "Dell × NVIDIA × MongoDB — Local AI Hackathon",
+    location: "New York City, NY",
+    date: "August 2026",
+    track: "Team Build · 1-Day Sprint",
+    placement: "FINALIST",
+    badge: "FINALIST",
+    project: "SENTRY",
+    description: "Built SENTRY with a team — a security camera that learns which alerts are actually worth your attention instead of hardcoding the rules. Runs fully on-device on a Dell GB10. Pitched it to about a hundred people after building it in a day.",
+    note: null
   }
 ];
 
 export const badges = [
   { name: "Hackathon Winner",       icon: "♛", color: "yellow"   },
-  { name: "3x Hackathons",          icon: "✦", color: "lavender" },
+  { name: "5x Hackathons",          icon: "✦", color: "lavender" },
   { name: "Welcome to Devpost",     icon: "♥", color: "peach"    },
 ];
 
 export const stats = [
   { num: "9",  label: "Projects",          accent: "blue"     },
-  { num: "3",  label: "Hackathons",        accent: "pink"     },
+  { num: "5",  label: "Hackathons",        accent: "pink"     },
   { num: "2",  label: "Internship Offers", accent: "lavender" },
   { num: "∞",  label: "Drive",             accent: "peach"    },
 ];

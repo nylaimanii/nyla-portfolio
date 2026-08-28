@@ -907,6 +907,15 @@
   background: var(--accent-2);
   color: #fff;
 }
+.hack-placement-badge--finalist {
+  background: var(--accent-dark);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 4px 12px;
+}
 
 .hack-desc {
   font-family: var(--font-body);
@@ -948,6 +957,39 @@
 .hack-link:hover {
   text-decoration: underline;
   text-underline-offset: 3px;
+}
+
+.section-header--split {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 32px;
+}
+.section-header--split .section-header-main {
+  min-width: 0;
+}
+
+.hack-section-photo {
+  flex-shrink: 0;
+  width: 260px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 2px solid var(--accent);
+  box-shadow: 0 8px 32px var(--shadow);
+  transform: rotate(-1.5deg);
+}
+
+@media (max-width: 768px) {
+  .section-header--split {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .hack-section-photo {
+    width: 100%;
+    height: 200px;
+    transform: none;
+  }
 }
 
 /* ═══════════════════════════════════════
