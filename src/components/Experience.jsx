@@ -8,7 +8,7 @@ function badgeClass(badge = '') {
 
 export default function Experience() {
   return (
-    <Window title="✦ EXPERIENCE.log" id="experience" index={2}>
+    <Window title="✦ EXPERIENCE.log" id="experience" index={1}>
       <div className="experience-list">
         {experience.map((exp, i) => (
           <motion.article

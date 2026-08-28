@@ -25,11 +25,11 @@ export default function App() {
       <Header />
       <main>
         <About />
-        <Education />
         <Experience />
         <Hackathons />
         <Projects />
         <Skills />
+        <Education />
         <Contact />
         <Chatbot />
       </main>

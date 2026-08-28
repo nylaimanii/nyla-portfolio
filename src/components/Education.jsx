@@ -6,7 +6,7 @@ export default function Education() {
   if (!edu) return null;
 
   return (
-    <Window title="★ EDUCATION.log" id="education" index={1}>
+    <Window title="★ EDUCATION.log" id="education" index={5}>
       <div className="education-list">
         <div className="card edu-card">
           <div className="edu-header">
