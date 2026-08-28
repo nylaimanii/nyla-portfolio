@@ -39,7 +39,7 @@ function eyebrow(raw, index) {
   return `${num} · ${label}`;
 }
 
-export default function Window({ title, fullWidth = false, children, id, index = 0, titleAdornment = null }) {
+export default function Window({ title, fullWidth = false, children, id, index = 0, titleAdornment = null, headerAside = null }) {
   const tone = index % 2 === 0 ? 'section--light' : 'section--tinted';
   void fullWidth;
   return (
@@ -52,12 +52,17 @@ export default function Window({ title, fullWidth = false, children, id, index =
       transition={{ duration: 0.55, ease: 'easeOut' }}
     >
       <div className="section-inner">
-        <div className="section-eyebrow">{eyebrow(title, index)}</div>
-        <h2 className="section-title">
-          {cleanTitle(title)}
-          {titleAdornment}
-        </h2>
-        <div className="section-rule" />
+        <div className={headerAside ? 'section-header section-header--split' : 'section-header'}>
+          <div className="section-header-main">
+            <div className="section-eyebrow">{eyebrow(title, index)}</div>
+            <h2 className="section-title">
+              {cleanTitle(title)}
+              {titleAdornment}
+            </h2>
+            <div className="section-rule" />
+          </div>
+          {headerAside}
+        </div>
         <div className="section-body">
           {children}
         </div>
