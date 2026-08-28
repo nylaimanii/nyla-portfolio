@@ -39,7 +39,7 @@ export default function Contact() {
         },
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       );
-      setStatus('Message sent — Nyla will respond shortly.');
+      setStatus('Message sent, Nyla will respond shortly.');
       setForm({ from_name: '', from_email: '', company: '', message: '' });
       setConfettiTrigger(t => t + 1);
     } catch {

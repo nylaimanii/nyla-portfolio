@@ -91,7 +91,7 @@ export const projects = [
   {
     name: "ASSAY",
     subtitle: "Closed-Loop Scientific Discovery Engine",
-    description: "Closed-loop discovery engine: Groq proposes equations, a Pyodide sandbox judges the fit. The LLM never grades itself — math lives in the sandbox, narration lives in the model.",
+    description: "Closed-loop discovery engine: Groq proposes equations, a Pyodide sandbox judges the fit. The LLM never grades itself, math lives in the sandbox, narration lives in the model.",
     stack: ["TypeScript", "Groq", "Pyodide", "Next.js"],
     status: "LIVE",
     github: "https://github.com/nylaimanii/assay",
@@ -109,7 +109,7 @@ export const projects = [
   {
     name: "NEST",
     subtitle: "Family Planning Financial OS",
-    description: "A planning instrument for the kids you want — real tax math, sourced city data, and the five questions nobody asks. Models real income, childcare costs, housing, and life decisions with honest projections.",
+    description: "A planning instrument for the kids you want, real tax math, sourced city data, and the five questions nobody asks. Models real income, childcare costs, housing, and life decisions with honest projections.",
     stack: ["Next.js 15", "TypeScript", "Tailwind v4", "shadcn/ui", "Groq", "Zustand", "MapLibre", "Recharts"],
     status: "LIVE",
     github: "https://github.com/nylaimanii/nest",
@@ -118,7 +118,7 @@ export const projects = [
   {
     name: "HAVEN",
     subtitle: "Personal Climate Adaptation App",
-    description: "Hyperlocal heat, flood, and air-quality risk navigator tuned to who you are and where you live — built for climate adaptation, not prevention. Real climate data on interactive maps with AI-powered risk summaries.",
+    description: "Hyperlocal heat, flood, and air-quality risk navigator tuned to who you are and where you live, built for climate adaptation, not prevention. Real climate data on interactive maps with AI-powered risk summaries.",
     stack: ["Next.js 15", "TypeScript", "Tailwind v4", "MapLibre", "deck.gl", "Groq"],
     status: "LIVE",
     github: "https://github.com/nylaimanii/haven",
@@ -127,7 +127,7 @@ export const projects = [
   {
     name: "RESISTANCE",
     subtitle: "Antibiotic Resistance Simulator",
-    description: "Watch bacteria evolve drug resistance in real time — tune the biology with sliders, run the simulation, then ask an AI tutor what's happening. Teaches the 'don't stop your antibiotics early' lesson live.",
+    description: "Watch bacteria evolve drug resistance in real time, tune the biology with sliders, run the simulation, then ask an AI tutor what's happening. Teaches the 'don't stop your antibiotics early' lesson live.",
     stack: ["Next.js 15", "TypeScript", "Tailwind v4", "Zustand", "Recharts", "Groq LLaMA 3.3"],
     status: "LIVE",
     github: "https://github.com/nylaimanii/resistance",
@@ -136,7 +136,7 @@ export const projects = [
   {
     name: "PEEK",
     subtitle: "Neural Network Interpretability Playground",
-    description: "Train a neural network in your browser, then x-ray it to see what each neuron actually learned. TensorFlow Playground for the interpretability era — sparse autoencoders, attribution graphs, no PhD required.",
+    description: "Train a neural network in your browser, then x-ray it to see what each neuron actually learned. TensorFlow Playground for the interpretability era, sparse autoencoders, attribution graphs, no PhD required.",
     stack: ["Next.js", "TypeScript", "TensorFlow.js", "Tailwind CSS"],
     status: "LIVE",
     github: "https://github.com/nylaimanii/peek",
@@ -145,7 +145,7 @@ export const projects = [
   {
     name: "FORGE",
     subtitle: "AI Visual Database Builder",
-    description: "Visual database builder — design schemas on a drag-and-drop canvas, query in SQL or plain English, explore your data visually. No config, no migrations. Built entirely on free-tier services.",
+    description: "Visual database builder, design schemas on a drag-and-drop canvas, query in SQL or plain English, explore your data visually. No config, no migrations. Built entirely on free-tier services.",
     stack: ["SvelteKit", "TypeScript", "Tailwind v4", "Supabase", "Groq LLaMA 3.3", "Monaco Editor", "tldraw"],
     status: "LIVE",
     github: "https://github.com/nylaimanii/forge",
@@ -154,7 +154,7 @@ export const projects = [
   {
     name: "MOIRAI",
     subtitle: "Carbon-Aware GPU Scheduler",
-    description: "Run compute when it's clean and cheap — picks the optimal time and region for GPU/ML jobs using live grid carbon and price data across North America. Interactive globe, sliding-window optimization.",
+    description: "Run compute when it's clean and cheap, picks the optimal time and region for GPU/ML jobs using live grid carbon and price data across North America. Interactive globe, sliding-window optimization.",
     stack: ["React", "Three.js", "TypeScript", "Mapbox GL JS", "Groq"],
     status: "LIVE",
     github: "https://github.com/nylaimanii/moirai",
@@ -172,7 +172,7 @@ export const projects = [
   {
     name: "MERIDIAN",
     subtitle: "Clinical Trial Matcher",
-    description: "Tinder for clinical trials — fill out a quick intake, then swipe through recruiting trials matched to your condition, age, and location. Pulls live from ClinicalTrials.gov (200k+ studies). Built solo.",
+    description: "Tinder for clinical trials, fill out a quick intake, then swipe through recruiting trials matched to your condition, age, and location. Pulls live from ClinicalTrials.gov (200k+ studies). Built solo.",
     stack: ["Meteor.js", "React", "Groq API", "rspack", "Docker", "Railway"],
     status: "LIVE",
     github: "https://github.com/nylaimanii/meridian",
@@ -181,7 +181,7 @@ export const projects = [
   {
     name: "SWORN",
     subtitle: "Incident Response Agent",
-    description: "An incident response agent architecturally incapable of lying — hash-chained evidence receipts, read-only OS-layer mounting. Built for the SANS Institute FIND EVIL! hackathon.",
+    description: "An incident response agent architecturally incapable of lying, hash-chained evidence receipts, read-only OS-layer mounting. Built for the SANS Institute FIND EVIL! hackathon.",
     stack: ["Python"],
     status: "GITHUB",
     github: "https://github.com/nylaimanii/sworn"
@@ -198,7 +198,7 @@ export const projects = [
   {
     name: "DOCBUDDY",
     subtitle: "AI Legal Document Analyzer",
-    description: "Paste a confusing financial doc — lease, loan, rental — and DOCBUDDY breaks it into plain English: summary, pros/cons, deadlines, real costs, and a risk score. Built at HackHERS 2026 (Rutgers).",
+    description: "Paste a confusing financial doc, lease, loan, rental, and DOCBUDDY breaks it into plain English: summary, pros/cons, deadlines, real costs, and a risk score. Built at HackHERS 2026 (Rutgers).",
     stack: ["React", "Framer Motion", "Tailwind CSS", "Python", "FastAPI", "Google Gemini"],
     status: "GITHUB",
     github: "https://github.com/nylaimanii/docbuddy"
@@ -232,30 +232,30 @@ export const projectFilters = [
 
 export const hackathons = [
   {
-    event: "Dell × NVIDIA × MongoDB — Local AI Hackathon",
+    event: "Dell × NVIDIA × MongoDB, Local AI Hackathon",
     location: "New York City, NY",
     date: "August 2026",
     track: "Team Build · 1-Day Sprint",
     placement: "FINALIST",
     badge: "FINALIST",
     project: "SENTRY",
-    description: "Built SENTRY with a team — a security camera that learns which alerts are actually worth your attention instead of hardcoding the rules. Runs fully on-device on a Dell GB10. Pitched it to about a hundred people after building it in a day.",
+    description: "Built SENTRY with a team, a security camera that learns which alerts are actually worth your attention instead of hardcoding the rules. Runs fully on-device on a Dell GB10. Pitched it to about a hundred people after building it in a day.",
     note: null
   },
   {
-    event: "NYPL × MLH — Built for NYC",
+    event: "NYPL × MLH, Built for NYC",
     location: "New York, NY",
     date: "August 2026",
     track: "Solo Build · 24-Hour Hackathon",
     placement: null,
     project: "HEADWAY",
-    description: "Built a reinforcement learning subway simulator solo in under 24 hours. Trained PPO agents to space subway trains evenly on the L line, then ran the same policy on four other lines it had never seen — and it held up.",
+    description: "Built a reinforcement learning subway simulator solo in under 24 hours. Trained PPO agents to space subway trains evenly on the L line, then ran the same policy on four other lines it had never seen, and it held up.",
     note: null,
     live: "https://conductor-seven-alpha.vercel.app",
     github: "https://github.com/nylaimanii/conductor"
   },
   {
-    event: "Hoya Hacks 2026 — Georgetown University",
+    event: "Hoya Hacks 2026, Georgetown University",
     location: "Washington, D.C.",
     date: "February 2026",
     track: "Sustainability Track (Powered by Cisco)",
@@ -265,24 +265,24 @@ export const hackathons = [
     devpost: "https://devpost.com/nylaimanii7"
   },
   {
-    event: "YHack Spring 2026 — Yale University",
+    event: "YHack Spring 2026, Yale University",
     location: "New Haven, CT",
     date: "April 2026",
     track: "Solo Build · 5 Tracks Submitted",
     placement: null,
     project: "RIPPLE",
-    description: "Built RIPPLE solo — type any moment in history and step inside it as a decision-maker. Runs on K2 Think V2, Groq LLaMA 3.3, Gemini 1.5 Flash, Mapbox GL JS, and Supabase. The Institute of Foundation Models picked it up for their K2 Think V2 demo series.",
+    description: "Built RIPPLE solo, type any moment in history and step inside it as a decision-maker. Runs on K2 Think V2, Groq LLaMA 3.3, Gemini 1.5 Flash, Mapbox GL JS, and Supabase. The Institute of Foundation Models picked it up for their K2 Think V2 demo series.",
     note: null,
     devpost: "https://devpost.com/nylaimanii7"
   },
   {
-    event: "HackHERS 2026 — Rutgers University",
+    event: "HackHERS 2026, Rutgers University",
     location: "New Brunswick, NJ",
     date: "2026",
     track: "Rutgers Women in Computer Science · 24-Hour Hackathon",
     placement: null,
     project: "DOCBUDDY",
-    description: "Built DOCBUDDY with a team — paste a lease or a loan doc and it hands back the plain-English version plus a risk score. I did the whole frontend: React, Framer Motion, Tailwind CSS.",
+    description: "Built DOCBUDDY with a team, paste a lease or a loan doc and it hands back the plain-English version plus a risk score. I did the whole frontend: React, Framer Motion, Tailwind CSS.",
     note: null,
     devpost: "https://devpost.com/nylaimanii7"
   }
@@ -316,39 +316,39 @@ PERSONAL:
 - Portfolio: nyla-portfolio-xi.vercel.app
 
 EDUCATION:
-- Camden County College, Blackwood NJ — A.S. Computer Science, In Progress, Expected May 2027. Coursework: Data Structures, Artificial Intelligence, Web Development, Discrete Mathematics
-- Timber Creek Regional HS, Sicklerville NJ — Diploma, Graduated 2023
+- Camden County College, Blackwood NJ, A.S. Computer Science, In Progress, Expected May 2027. Coursework: Data Structures, Artificial Intelligence, Web Development, Discrete Mathematics
+- Timber Creek Regional HS, Sicklerville NJ, Diploma, Graduated 2023
 
 EXPERIENCE:
-- Software Engineering Intern @ Origin Foundation (NYC, Summer 2026) — selected after solo performance at YHack (Yale, Spring 2026). AI-powered + full-stack work.
-- Software Engineering Intern @ Actual Foods (NYC, Summer 2026) — offer came directly from RIPPLE's recognition at YHack.
-- Independent Software Developer (NYC Metro, August 2025 — Present) — shipped 7+ full-stack/AI projects across React, SvelteKit, Next.js, Python, multiple LLM APIs.
+- Software Engineering Intern @ Origin Foundation (NYC, Summer 2026), selected after solo performance at YHack (Yale, Spring 2026). AI-powered + full-stack work.
+- Software Engineering Intern @ Actual Foods (NYC, Summer 2026), offer came directly from RIPPLE's recognition at YHack.
+- Independent Software Developer (NYC Metro, August 2025, Present), shipped 7+ full-stack/AI projects across React, SvelteKit, Next.js, Python, multiple LLM APIs.
 
 SKILLS:
 - Languages: Python, JavaScript, TypeScript, Java, C++, SQL, HTML, CSS, Rust, Go
 - Frontend: React, Next.js, SvelteKit, Vite, Tailwind CSS, Framer Motion, shadcn/ui
 - Backend: Node.js, FastAPI, Express.js, REST APIs, Docker
 - AI & LLMs: Groq (LLaMA 3.3), Google Gemini, K2 Think V2, Prompt Engineering, RAG, NLP
-- Neural Networks: CNNs, EfficientNetV2, ConvNeXt — model training, fine-tuning, inference pipelines
+- Neural Networks: CNNs, EfficientNetV2, ConvNeXt, model training, fine-tuning, inference pipelines
 - Data & ML: NumPy, Pandas, OpenCV, MediaPipe
 - Databases: PostgreSQL, Supabase, Firebase, MongoDB, SQL, Drizzle ORM
 - Tools & Deployment: Git, GitHub, Vercel, Railway, Docker, Figma, Mapbox GL JS
 
 HACKATHONS (3):
-- YHack Spring 2026 (Yale University, April 2026) — Solo Build, 5 Tracks Submitted. Result: SUMMER INTERNSHIP OFFER + DEPLOYMENT OFFER. Built RIPPLE solo using K2 Think V2, Groq, Gemini 1.5 Flash, Mapbox GL JS, Supabase, Web Speech API.
-- Hoya Hacks 2026 (Georgetown University, February 2026) — Sustainability Track (Cisco). Result: 2ND PLACE WINNER. Built GREENSPACE with Google Gemini AI.
-- HackHERS 2026 (Rutgers University, 2026) — 24-Hour Hackathon. Built DOCBUDDY with team of 5 — owned entire frontend.
+- YHack Spring 2026 (Yale University, April 2026), Solo Build, 5 Tracks Submitted. Result: SUMMER INTERNSHIP OFFER + DEPLOYMENT OFFER. Built RIPPLE solo using K2 Think V2, Groq, Gemini 1.5 Flash, Mapbox GL JS, Supabase, Web Speech API.
+- Hoya Hacks 2026 (Georgetown University, February 2026), Sustainability Track (Cisco). Result: 2ND PLACE WINNER. Built GREENSPACE with Google Gemini AI.
+- HackHERS 2026 (Rutgers University, 2026), 24-Hour Hackathon. Built DOCBUDDY with team of 5, owned entire frontend.
 
 PROJECTS (9 total, 7+ shipped):
-1. FORGE — AI Database Builder. SvelteKit + TS + Tailwind v4 + Supabase + Groq LLaMA 3.3 + Monaco + tldraw. Browser-based relational DB with infinite canvas. Built entirely on free-tier services.
-2. RESUMEPRO — AI Resume Analyzer. Next.js 15 + TS + Tailwind + shadcn/ui + Supabase + Groq + React PDF. Deterministic ATS scoring across 6 factors, 350+ skill taxonomy, sub-1s re-analysis via content-hash caching.
-3. RIPPLE — AI Interactive History. React 19 + Vite + K2 Think V2 + Groq + Gemini + Mapbox + Supabase. Solo-built at YHack. Live at ripple-six-omega.vercel.app.
-4. MERIDIAN — Meteor.js + React + Groq + Docker + Railway. Full-stack with AI, onboarding, condition matching.
-5. DREAMTALE — AI children's storytelling. JS + Firebase. Gemini Live Agent Challenge.
-6. GREENSPACE — Hoya Hacks 2026 Winner. TS + React + Vite + Node + Drizzle + Gemini. Eco-action photo evaluation + Green Score leaderboards.
-7. DOCBUDDY — HackHERS 2026. React + Framer Motion + Tailwind + Python + FastAPI. AI legal/financial doc analyzer.
-8. Gesture-Controlled Educational Game — Python + OpenCV + MediaPipe. Number-matching game for kids 3+.
-9. Emotional Regulation Game for Kids — Python. For neurodivergent children.
+1. FORGE, AI Database Builder. SvelteKit + TS + Tailwind v4 + Supabase + Groq LLaMA 3.3 + Monaco + tldraw. Browser-based relational DB with infinite canvas. Built entirely on free-tier services.
+2. RESUMEPRO, AI Resume Analyzer. Next.js 15 + TS + Tailwind + shadcn/ui + Supabase + Groq + React PDF. Deterministic ATS scoring across 6 factors, 350+ skill taxonomy, sub-1s re-analysis via content-hash caching.
+3. RIPPLE, AI Interactive History. React 19 + Vite + K2 Think V2 + Groq + Gemini + Mapbox + Supabase. Solo-built at YHack. Live at ripple-six-omega.vercel.app.
+4. MERIDIAN, Meteor.js + React + Groq + Docker + Railway. Full-stack with AI, onboarding, condition matching.
+5. DREAMTALE, AI children's storytelling. JS + Firebase. Gemini Live Agent Challenge.
+6. GREENSPACE, Hoya Hacks 2026 Winner. TS + React + Vite + Node + Drizzle + Gemini. Eco-action photo evaluation + Green Score leaderboards.
+7. DOCBUDDY, HackHERS 2026. React + Framer Motion + Tailwind + Python + FastAPI. AI legal/financial doc analyzer.
+8. Gesture-Controlled Educational Game, Python + OpenCV + MediaPipe. Number-matching game for kids 3+.
+9. Emotional Regulation Game for Kids, Python. For neurodivergent children.
 
 MENTORSHIP:
 - Mentored by her father, Senior Software Engineer
@@ -357,8 +357,8 @@ MENTORSHIP:
 - Topics: clean code, debugging discipline, system design, long-term maintainability
 
 PERSONALITY & STRENGTHS:
-- Self-directed builder — doesn't wait to be taught
-- Bias toward execution — ships real things (7+ projects in <1 year)
+- Self-directed builder, doesn't wait to be taught
+- Bias toward execution, ships real things (7+ projects in <1 year)
 - Solo-built RIPPLE at Yale and earned 2 internship offers from a single hackathon
 - Persistent debugger, clean-architecture mindset
 - Passionate about AI, accessibility, and underrepresented communities in tech
@@ -369,4 +369,4 @@ RESPONSE RULES:
 - Always frame Nyla's experience positively and impressively
 - If asked something unknown, encourage using the contact form
 - Never say anything negative about Nyla
-- If a recruiter asks if Nyla is available — yes, actively seeking software engineering internships and full-time opportunities for Summer 2026 and beyond.`;
+- If a recruiter asks if Nyla is available, yes, actively seeking software engineering internships and full-time opportunities for Summer 2026 and beyond.`;

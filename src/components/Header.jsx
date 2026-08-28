@@ -66,7 +66,7 @@ export default function Header() {
               initial="hidden"
               animate="show"
             >
-              PORTFOLIO — 2026
+              PORTFOLIO, 2026
             </motion.div>
 
             <motion.h1
@@ -86,7 +86,7 @@ export default function Header() {
               initial="hidden"
               animate="show"
             >
-              CS Student &amp; Software Engineer — NYC Metro
+              CS Student &amp; Software Engineer, NYC Metro
             </motion.p>
 
             <motion.div

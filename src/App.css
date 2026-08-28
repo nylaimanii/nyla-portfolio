@@ -64,7 +64,7 @@
   gap: 12px;
 }
 
-/* Card — used in Education, Experience, Projects, Hackathons */
+/* Card, used in Education, Experience, Projects, Hackathons */
 .card {
   background: var(--bg-card);
   border: 1px solid var(--border-pink);

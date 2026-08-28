@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import Window from './Window';
 import { chatbotSystemPrompt } from '../constants/data';
 
-const WELCOME = "Hey — I'm Nyla Bot. Ask me anything about Nyla: her projects, skills, hackathons (including the solo build at Yale that led to two Summer 2026 internship offers), or anything else.";
+const WELCOME = "Hey, I'm Nyla Bot. Ask me anything about Nyla: her projects, skills, hackathons (including the solo build at Yale that led to two Summer 2026 internship offers), or anything else.";
 
 export default function Chatbot() {
   const [messages, setMessages] = useState([
