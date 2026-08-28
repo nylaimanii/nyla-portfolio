@@ -4,7 +4,7 @@ const STATS = [
   { num: '5',    label: 'Hackathons' },
   { num: '2',    label: 'Internships' },
   { num: '14+',  label: 'Projects Shipped' },
-  { num: '2026', label: 'Year Started' },
+  { num: '2025', label: 'Year Started' },
 ];
 
 export default function About() {
