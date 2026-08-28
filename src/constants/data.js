@@ -338,7 +338,7 @@ If someone asks something you don't know, just say you don't know and tell them 
 
 EVERYTHING YOU KNOW ABOUT NYLA:
 
-She's a 20-year-old CS student and builder. Self-taught across most of what she knows. Family are immigrants from Panama. Her dad built a career in enterprise software at IBM and Microsoft and that shaped how she works.
+She's a 21-year-old CS student and builder. Self-taught across most of what she knows. Family are immigrants from Panama. Her dad built a career in enterprise software at IBM and Microsoft and that shaped how she works.
 
 Currently interning at Origin Foundation and ActualFood, both in NYC, both Summer 2026.
 
