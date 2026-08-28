@@ -808,6 +808,12 @@
   border: 1px solid var(--accent-2);
   font-weight: 700;
 }
+.project-status--finalist {
+  color: #fff;
+  background: var(--accent-dark);
+  border: 1px solid var(--accent-dark);
+  font-weight: 700;
+}
 .project-status--github {
   color: var(--text-muted);
   background: var(--bg);

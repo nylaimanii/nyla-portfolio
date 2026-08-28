@@ -12,6 +12,7 @@ function statusClass(status = '') {
   if (s.includes('winner')) return 'project-status project-status--winner';
   if (s.includes('progress')) return 'project-status project-status--progress';
   if (s.includes('github')) return 'project-status project-status--github';
+  if (s.includes('finalist')) return 'project-status project-status--finalist';
   return 'project-status project-status--live';
 }
 
@@ -20,6 +21,7 @@ function statusLabel(status = '') {
   if (s.includes('winner')) return 'WINNER';
   if (s.includes('progress')) return 'IN PROGRESS';
   if (s.includes('github')) return 'GITHUB';
+  if (s.includes('finalist')) return 'FINALIST';
   return 'LIVE';
 }
 
